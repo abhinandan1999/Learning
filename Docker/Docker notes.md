@@ -1,11 +1,15 @@
 [Source](https://www.youtube.com/watch?v=1UHPfDbmZZ4&list=PL0xeHY_ImQVWZMJ-HF3I2GErIeEl4ca2b&index=2)
 
 What is Docker?
+
 	Docker is a container management tool.
 
 What is container?
-	Container is a fully independent APP run time environment with their own resources.
-	Container is INIT of ONE USER NS, ONE NET NS, ONE ONE PID NS, ONE MOUNT NS powered by kernel with the help of Docker.
+
+	Container is a fully independent APP run time environment with their own 
+	resources.
+	Container is INIT of ONE USER NS, ONE NET NS, ONE ONE PID NS, ONE MOUNT NS 
+	powered by kernel with the help of Docker.
 
 What are the components/resources needed for any app to run?
 
