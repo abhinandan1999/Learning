@@ -1,3 +1,6 @@
+#### <u>Newline</u>
+To add a new line in markdown, just add forward slash "\<br>" at the end of line
+
 #### <u>Bold</u>:
 For any word to be bold in markdown it should be within ** word**
 
