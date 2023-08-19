@@ -21,7 +21,7 @@ To add a link use square brackets followed by link in parentheses.
 [Link_name](https://www.javatpoint.com/link-in-markdown)
 
 #### <u>Images</u>
-Images in Markdown can be created by inserting the **image name** inside the square brackets and **image link URL** inside the parenthesis with an exclamatory symbol at the beginning.
+Images in Markdown can be created by inserting the **image name** inside the square brackets and **image link URL** inside the parenthesis with an exclamation symbol at the beginning.
 ![image_name](Image_path)
 Image path could be:
 1) Either link to the image
