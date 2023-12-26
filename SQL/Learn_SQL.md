@@ -27,7 +27,7 @@
 
 ### Setup password USER using ALTER Command
 ```
-<u>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Qwerty2@';</u>
+<u>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<enter password>';</u>
 ```
 
 ====================================================================================================
@@ -70,7 +70,7 @@ Check current database
 SELECT database();
 ```
 
-_Syntax related to tables in Database_
+### _Syntax related to tables in Database_
 
 Create a table in database
 ```
@@ -98,6 +98,12 @@ Drop the table
 DROP table <name_of_table>
 ```
 
+
+### CRUD Operation
+C: Create: INSERT statements
+R: Read: SELECT statements
+U: UPDATE statements
+D: DELETE statements
 
 
 
