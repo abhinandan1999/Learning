@@ -17,3 +17,15 @@
 
 ### Setup password USER using ALTER Command
 <u>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Qwerty2@';</u>
+
+
+
+====================================================================================================
+DtataBase (Make notes from leetcode)
+
+
+
+=====================================================================================================
+SQL (Structured query Langauge)
+*It is used to query the data from relational database*
+
