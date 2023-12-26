@@ -100,10 +100,10 @@ DROP table <name_of_table>
 
 
 ### CRUD Operation
-C: Create: INSERT statements
-R: Read: SELECT statements
-U: UPDATE statements
-D: DELETE statements
+C: Create: INSERT statements <\br>
+R: Read: SELECT statements <\br>
+U: UPDATE statements <\br>
+D: DELETE statements <\br>
 
 
 
