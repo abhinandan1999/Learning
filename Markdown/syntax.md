@@ -14,7 +14,7 @@ For ex: *Hello* _world_
 #### <u>Headings</u>
 There are six types of headings. 
 The largest one starts with # and last one has ######
-Note: Please add a space after #
+Note: Add a space after #
 
 #### <u>Links</u>
 To add a link use square brackets followed by link in parentheses.
