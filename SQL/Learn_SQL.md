@@ -29,3 +29,112 @@ DtataBase (Make notes from leetcode)
 SQL (Structured query Langauge)
 *It is used to query the data from relational database*
 
+
+
+<u>### SQL Syntax</u>
+
+_Syntax related to Database_
+
+Get the list of all the databases currently present.
+```
+SHOW DATABASES;
+```
+
+Create a database
+```
+CREATE DATABASE <name_of_database>;
+```
+
+Drop the database
+```
+DROP DATABASE <name_of_database>;
+```
+
+Connect with database
+```
+USE <name_of_database>;
+```
+
+Check current database
+```
+SELECT database();
+```
+
+_Syntax related to tables in Database_
+
+Create a table in database
+```
+CREATE TABLE <name_of_table>
+(
+    col_name1 datatype1,
+    col_name2 datatype2,
+    col_name3 datatype3
+);
+```
+
+Show various tables in database
+```
+SHOW tables;
+```
+
+See schema of table
+```
+DESCRIBE <name_of_table>;
+DESC <name_of_table>
+```
+
+Drop the table
+```
+DROP table <name_of_table>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Create a note about datatype in SQL
+
+
