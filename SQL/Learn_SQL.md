@@ -306,9 +306,9 @@ TYPES of JOINS
 5. CROSS JOIN: Multiply the table, DEFAULT if no condition for JOIN is provided
 
 
-DIfference between WHERE and HAVING Clause
-WHERE: Is used to filter individual records before GROUPBY clause
-HAVING: is used after aggregation to filter out 
+DIfference between WHERE and HAVING Clause \
+WHERE: Is used to filter individual records before GROUPBY clause \
+HAVING: is used after aggregation to filter out \
 
 
 
@@ -343,24 +343,24 @@ FROM
     table
 ```
 
-RANK and DENSE Rank
-Rank: Gives same number to same value and continues like row_number
-Ex:
+RANK and DENSE Rank \
+Rank: Gives same number to same value and continues like row_number \
+Ex: \
 Name    class   Rank
 Abhi    1       1
 Rahul   1       1
 Pathak  2       3
 
-DENSE RANK: Gives same number to same value and resumes from latest rank
-Ex:
+DENSE RANK: Gives same number to same value and resumes from latest rank \
+Ex: \
 Name    class   Rank
 Abhi    1       1
 Rahul   1       1
 Pathak  2       2
 
 
-INDEXES and ORDER OF EXECUTION
-There are two ways SQL search for data:
+INDEXES and ORDER OF EXECUTION \
+There are two ways SQL search for data: \
 1. SEEK: Based on index
          Generally Primary keys are inserted in order and search can happen faster using indexes
 
@@ -377,8 +377,8 @@ There are two ways SQL search for data:
          SQL searches the entire data
 
 
-Way to read a plan:
-It is read from Right to LEFT and Top to Bottom
+<b>Way to read a plan: \
+It is read from Right to LEFT and Top to Bottom </b>
 
 
 
@@ -406,12 +406,12 @@ WITH
 SELECT req_col1 FROM new_table2
 ```
 
-a. From WITH till SELECT it is a single query
-b. CTE stores table in memory
-c. CTE defines a temporary result set that can be referred in
-    SELECT, INSERT, UPDATE, DELETE statements, immediately followed by CTE expressions
-d. CTE can improve the performance (Not always)
-e. On CTE indexes are non performant
+a. From WITH till SELECT it is a single query \
+b. CTE stores table in memory \
+c. CTE defines a temporary result set that can be referred in \
+    SELECT, INSERT, UPDATE, DELETE statements, immediately followed by CTE expressions \
+d. CTE can improve the performance (Not always) \
+e. On CTE indexes are non performant \
 
 
 
