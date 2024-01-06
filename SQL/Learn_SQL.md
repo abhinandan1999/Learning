@@ -354,10 +354,11 @@ Ex: \
 
 DENSE RANK: Gives same number to same value and resumes from latest rank \
 Ex: \
-Name    class   Rank
-Abhi    1       1
-Rahul   1       1
-Pathak  2       2
+|Name    |class   |Rank|
+|:------:|:------:|---:|
+|Abhi    |1       |1   |
+|Rahul   |1       |1   |
+|Pathak  |2       |2   |
 
 
 INDEXES and ORDER OF EXECUTION \
