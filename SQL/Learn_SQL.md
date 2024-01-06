@@ -346,10 +346,11 @@ FROM
 RANK and DENSE Rank \
 Rank: Gives same number to same value and continues like row_number \
 Ex: \
-Name    class   Rank
-Abhi    1       1
-Rahul   1       1
-Pathak  2       3
+|Name    |class   |Rank|
+|:------:|:------:|---:|
+|Abhi    |1       |1   |
+|Rahul   |1       |1   |
+|Pathak  |2       |3   |
 
 DENSE RANK: Gives same number to same value and resumes from latest rank \
 Ex: \
