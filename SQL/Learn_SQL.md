@@ -196,17 +196,17 @@ USECASES: \
 	        <colName> datatype;
         ```
 
-DDL vs DML
-DDL: Data Definition Language: Changes the table structure
-Ex: CREATE, ALTER, DROP, TRUNCATE
+DDL vs DML \
+DDL: Data Definition Language: Changes the table structure \
+Ex: CREATE, ALTER, DROP, TRUNCATE \
 
-DML: Data Manipulation Language
-Ex: INSERT, UPDATE, DELETE
+DML: Data Manipulation Language \
+Ex: INSERT, UPDATE, DELETE \
 
 
-Difference between TRUNCATE and DELETE
-TRUNCATE (DDL): Remove all the records from table and recreate it
-DELETE (DML): Deletes records one by one hence inefficient
+Difference between TRUNCATE and DELETE \
+TRUNCATE (DDL): Remove all the records from table and recreate it \
+DELETE (DML): Deletes records one by one hence inefficient \
 
 
 
@@ -259,7 +259,7 @@ WHERE
     colName REGEXP 'regexp_pattern';
 ```
 
-LOGICAL Operator in SQL
+LOGICAL Operator in SQL \
     1. _=_ : Equal to
     2. _!=_ or _<>_ : Not equal to
     3. _LIKE <keyword>_ 
