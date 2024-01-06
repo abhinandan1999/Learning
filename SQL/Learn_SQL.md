@@ -174,7 +174,7 @@ DELETE * FROM <tableName>
 ```
 
 ALTER COMMANDS IN SQL
-USECASES:
+USECASES: \
     1. Add a new column
     ```
         ALTER TABLE <tableName>
@@ -182,14 +182,14 @@ USECASES:
             <colNametoAdd> <datatype>
     ```
 
-    2. DROP a column
+    2. DROP a column \
         ```
         ALTER TABLE <tableName>
         DROP COLUMN
             <coltoDrop>
         ```
     
-    3. Modify the column
+    3. Modify the column \
         ```
         ALTER TABLE <tableName>
         MODIFY COLUMN
