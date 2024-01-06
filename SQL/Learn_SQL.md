@@ -271,7 +271,159 @@ LOGICAL Operator in SQL
 
 
 CASE STATEMENTS 
-LINE NUMBER 412
+```
+SELECT
+    col1,
+    col2,
+    CASE
+        WHEN <condition1> THEN <value1>
+        WHEN <condition2> THEN <value2>
+        ELSE value3
+    END AS col3
+FROM
+    <table_name>
+```
+
+
+JOINS in SQL
+```
+SELECT
+    a.col1,
+    b.col2,
+    a.vcol3
+FROM
+    table1 AS a
+        <TYPE OF JOIN> JOIN
+    table2 AS b
+    ON a.common_col1 = b.common_col2
+```
+
+TYPES of JOINS
+1. DEFAULT is INNER join
+2. LEFT JOIN or LEFT OUTER JOIN: Same
+3. RIGHT JOIN
+4. OUTER JOIN: can also be UNION between LEFT and RIGHT outer JOIN
+5. CROSS JOIN: Multiply the table, DEFAULT if no condition for JOIN is provided
+
+
+DIfference between WHERE and HAVING Clause
+WHERE: Is used to filter individual records before GROUPBY clause
+HAVING: is used after aggregation to filter out 
+
+
+
+Create new table from existing table
+```
+CREATE
+    TABLE new_table
+    AS
+    SELECT
+        * 
+    FROM
+        existing_table
+```
+
+OVER and PARTITION BY Clause
+```
+SELECT
+    col1,
+    col2,
+    COUNT(agg_col) OVER (PARTITION BY part_col)
+FROM
+    table1
+```
+
+ROW NUMBER
+```
+SELECT
+    col1,
+    col2,
+    ROW_NUMBER() OVER (ORDER BY order_col DESC)
+FROM
+    table
+```
+
+RANK and DENSE Rank
+Rank: Gives same number to same value and continues like row_number
+Ex:
+Name    class   Rank
+Abhi    1       1
+Rahul   1       1
+Pathak  2       3
+
+DENSE RANK: Gives same number to same value and resumes from latest rank
+Ex:
+Name    class   Rank
+Abhi    1       1
+Rahul   1       1
+Pathak  2       2
+
+
+INDEXES and ORDER OF EXECUTION
+There are two ways SQL search for data:
+1. SEEK: Based on index
+         Generally Primary keys are inserted in order and search can happen faster using indexes
+
+         INDEX are of 2 types:
+            1. Clustered Index
+                There can be only one clustered index.
+                It can be from single column or multiple column
+
+            2. Non Clustered Index
+                a. Creates a index table, where column in   kept in sorted order
+                b. First it retrieves information from index and search in the main table
+                c. It is 2 step process
+2. SCAN: Search the entire table
+         SQL searches the entire data
+
+
+Way to read a plan:
+It is read from Right to LEFT and Top to Bottom
+
+
+
+Common Table Expression (CTE)
+1. It is used to simplify queries
+2. It improves readability of queries
+
+```
+WITH
+    new_table1 (req_col1, req_col2) AS (
+        SELECT
+            col1,
+            col2
+        FROM    
+            table1
+    )
+
+    new_table2 AS (
+        SELECT
+            req_col1
+        FROM 
+            new_table1
+    )
+
+SELECT req_col1 FROM new_table2
+```
+
+a. From WITH till SELECT it is a single query
+b. CTE stores table in memory
+c. CTE defines a temporary result set that can be referred in
+    SELECT, INSERT, UPDATE, DELETE statements, immediately followed by CTE expressions
+d. CTE can improve the performance (Not always)
+e. On CTE indexes are non performant
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
