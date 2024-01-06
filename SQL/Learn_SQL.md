@@ -175,7 +175,7 @@ DELETE * FROM <tableName>
 
 ALTER COMMANDS IN SQL
 USECASES: \
-1. Add a new column
+1. Add a new column \
 ```
     ALTER TABLE <tableName>
     ADD COLUMN
