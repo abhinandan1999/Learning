@@ -260,14 +260,14 @@ WHERE
 ```
 
 LOGICAL Operator in SQL \
-    1. _=_ : Equal to
-    2. _!=_ or _<>_ : Not equal to
-    3. _LIKE <keyword>_ 
-    4, _NOT LIKE <keyword>_
-    5. _AND_
-    6. _OR_
-    7. _IN ('word1', 'word2')_
-    8. _NOT IN ('word1', 'word2')_
+    1. _=_ : Equal to \
+    2. _!=_ or _<>_ : Not equal to \
+    3. _LIKE <keyword>_  \
+    4, _NOT LIKE <keyword>_ \
+    5. _AND_ \
+    6. _OR_ \
+    7. _IN ('word1', 'word2')_ \
+    8. _NOT IN ('word1', 'word2')_ \
 
 
 CASE STATEMENTS 
