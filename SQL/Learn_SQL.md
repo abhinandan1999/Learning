@@ -30,12 +30,13 @@
 <u>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<enter password>';</u>
 ```
 
-==================================================================================================== \
+====================================================================================================
 ### Database architecture
 
 ![database_architecture](Images/database_architecture.png)
 
 =====================================================================================================
+
 SQL (Structured query Langauge)
 *It is used to query the data from relational database*
 
