@@ -31,7 +31,7 @@
 ```
 
 ==================================================================================================== \
-Database architecture \
+### Database architecture
 
 ![database_architecture](Images/database_architecture.png)
 
