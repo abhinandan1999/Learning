@@ -32,7 +32,7 @@
 
 ====================================================================================================
 DtataBase architecture
-![database_architecture](SQL/Images/database_architecture.png)
+![database_architecture](Images/database_architecture.png)
 
 =====================================================================================================
 SQL (Structured query Langauge)
