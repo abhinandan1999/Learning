@@ -31,9 +31,8 @@
 ```
 
 ====================================================================================================
-DtataBase (Make notes from leetcode)
-
-
+DtataBase architecture
+![database_architectures](SQL/Images/database_architecture.png)
 
 =====================================================================================================
 SQL (Structured query Langauge)
@@ -413,7 +412,7 @@ b. CTE stores table in memory \
 c. CTE defines a temporary result set that can be referred in \
     SELECT, INSERT, UPDATE, DELETE statements, immediately followed by CTE expressions \
 d. CTE can improve the performance (Not always) \
-e. On CTE indexes are non performant \
+e. On CTE indexes are non performant
 
 
 
