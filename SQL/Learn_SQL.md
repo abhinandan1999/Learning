@@ -103,6 +103,9 @@ CREATE TABLE <name_of_table>
 );
 ```
 
+#### Datatypes in SQL
+
+
 Inserting values in tables
 ```
 INSERT INTO <table_name(colName1, colName2, colName3)> VALUES (colValue1, colValue2, colValue3),
