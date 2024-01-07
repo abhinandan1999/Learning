@@ -105,6 +105,8 @@ CREATE TABLE <name_of_table>
 
 #### Datatypes in SQL
 
+##### Strings datatype
+
 
 Inserting values in tables
 ```
