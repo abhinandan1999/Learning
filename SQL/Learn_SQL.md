@@ -30,8 +30,9 @@
 <u>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<enter password>';</u>
 ```
 
-====================================================================================================
-Database architecture
+==================================================================================================== \
+Database architecture \
+
 ![database_architecture](Images/database_architecture.png)
 
 =====================================================================================================
