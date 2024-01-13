@@ -104,12 +104,21 @@ CREATE TABLE <name_of_table>
 ```
 
 #### Datatypes in SQL
-|DataType      | Description                                         |
-|:-------------|:----------------------------------------------------|
-|CHAR(SIZE)    | It is used to specify a fixed length string that can contain numbers, letters, and special characters. Its size can be 0 to 255 characters. Default is 1.                                                  |
-
 
 ##### Strings datatype
+|DataType      | Description                                         |
+|:-------------|:----------------------------------------------------|
+|CHAR(SIZE)    | It is used to specify a fixed length string that can contain numbers, letters, and special characters. Its size can be 0 to 255 characters. Default is 1. |
+|VARCHAR(SIZE) | It is used to specify a variable length string that can contain numbers, letters, and special characters. Its size can be from 0 to 65535 characters. |
+|BINARY(SIZE) | It is equal to CHAR() but stores binary type strings. Its size parameter specifies the column length in the bytes. Default is 1. |
+|VARBINARY(Size) | It is equal to VARCHAR() but stores binary byte strings. Its size parameter specifies the column length in the bytes. Default is 1. |
+|TEXT(SIZE) | It holds a string that can contain a maximum length of 255 characters. |
+|TINYTEXT | It holds a string with a maximum length of 255 characters. |
+|MEDIUMTEXT | It holds a string with a maximum length of 16,777,215. |
+|LONGTEXT | It holds a string with a maximum length of 4,294,967,295 characters. |
+|ENUM(Vval1, val2, ...) | It is used when a string object having only one value, chosen from a list of possible values. It contains 65535 values in an ENUM list. If you insert a value that is not in the list, a blank value will be inserted. |
+|SET(val1, val2, ...) | It is used to specify a string that can have 0 or more values, chosen from a list of possible values. You can list up to 64 values one time in a SET list. |
+|BLOB(SIZE) | It is used for BLOBs (Binary Large Objects). It can hold up to 65,535 bytes. |
 
 
 Inserting values in tables
