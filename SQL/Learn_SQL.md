@@ -142,6 +142,10 @@ TIMESTAMP(fsp) | It is used to specify the timestamp. Its value is stored as the
 |YEAR | It is used to specify a year in four digit format. Values allowed in four digit format from 1901 to 2155, and 0000. |
 
 
+#### Constraints in SQL
+|Constraint    | Description                                         |
+|:-------------|:----------------------------------------------------|
+|NOT NULL |  |
 
 Inserting values in tables
 ```
@@ -536,7 +540,7 @@ e. On CTE indexes are non performant
 
 
 ### Questions
-1. Create a note about datatype, constraint  and Keys in SQL
+1. Create a note about  constraint  and Keys in SQL
 2. Understand all usecase of ALTER command
 3. Understand the difference between DELETE, TRUNCATE and DROP 
 4. Understand LIKE operator in SQL
