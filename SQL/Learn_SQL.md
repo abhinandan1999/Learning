@@ -104,6 +104,10 @@ CREATE TABLE <name_of_table>
 ```
 
 #### Datatypes in SQL
+|DataType      | Description                                         |
+|:-------------|:----------------------------------------------------|
+|CHAR(SIZE)    | It is used to specify a fixed length string that can contain numbers, letters, and special characters. Its size can be 0 to 255 characters. Default is 1.                                                  |
+
 
 ##### Strings datatype
 
