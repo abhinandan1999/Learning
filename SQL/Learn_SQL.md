@@ -120,6 +120,28 @@ CREATE TABLE <name_of_table>
 |SET(val1, val2, ...) | It is used to specify a string that can have 0 or more values, chosen from a list of possible values. You can list up to 64 values one time in a SET list. |
 |BLOB(SIZE) | It is used for BLOBs (Binary Large Objects). It can hold up to 65,535 bytes. |
 
+##### Numeric datatype
+|DataType      | Description                                         |
+|:-------------|:----------------------------------------------------|
+|BIT(SIZE)    | It is used for a bit-value type. The number of bits per value is specified in size. Its size can be 1 to 64. The default value is 1. |
+|INT(SIZE) | It is used for integer values. Its signed range varies from -2147483648 to 2147483647 and unsigned range varies from 0 to 4294967295. The size parameter specifies the max display width that is 255. |
+|INTEGER(SIZE) | It is equal to INT(SIZE) |
+FLOAT(size, d) | It is used to specify a floating point number. Its size parameter specifies the total number of digits. The number of digits after the decimal point is specified by _d_ paramter. |
+|FLOAT(p) | It is used to specify a flaoting point number. MYSQL used _p_ parameter to determine whether to use FLOAT or DOUBLE. If _p_ is between 0 to 24, the datatype becomes FLOAT(). If p is from 25 to 53, the datatype becomes DOUBLE(). |
+|DECIMAL(SIZE, D) | It is used to specify a fixed point number. Its size parameter specifies the total number of digits. The number of digits after the decimal parameter is specified by _d_ paramter. The maximum value for size is 65, and the default value is 10. The maximum value for _d_ is 30, and default value is 0. |
+|DEC(SIZE, d) | It is equal to DECIMAL(SIZE, D) |
+|BOOL | It is used to specify Boolean value TRUE or FALSE. Zero is considered as FALSE, and nonzero values are considered as TRUE. |
+
+##### DATE and TIME datatype
+|DataType      | Description                                         |
+|:-------------|:----------------------------------------------------|
+|DATE | It is used to specify date format YYYY-MM-DD. Its supported range is from '1000-01-01' to '9999-12-31' |
+|DATETIME(fsp) | It is used to specify date and time combination. Its format is YYYY-MM-DD hh:mm:ss. Its supported range is from '1000-01-01 00:00:00' to '9999-12-31 23:59:59' |
+TIMESTAMP(fsp) | It is used to specify the timestamp. Its value is stored as the number of seconds since the Unix epoch('1970-01-01 00:00:00' UTC). Its format is YYYY-MM-DD hh:mm:ss. Its supported range is from '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC |
+|TIME(fsp) | It is used to specify the time format. Its format is hh:mm:ss. Its supported range is from '-838:59:59' to '838:59:59' |
+|YEAR | It is used to specify a year in four digit format. Values allowed in four digit format from 1901 to 2155, and 0000. |
+
+
 
 Inserting values in tables
 ```
