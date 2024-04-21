@@ -544,5 +544,6 @@ e. On CTE indexes are non performant
 2. Understand all usecase of ALTER command
 3. Understand the difference between DELETE, TRUNCATE and DROP 
 4. Understand LIKE operator in SQL
+5. str_to_date functions
 
 
