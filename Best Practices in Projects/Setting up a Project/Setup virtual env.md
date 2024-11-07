@@ -83,5 +83,74 @@ pyenv virtualenv-delete <vir-env name>
 
 ### 2. Using Conda
 
+#### Install Anaconda
+```
+[TO DO]
+```
+
+#### Create a new virtual environment
+It creates the new virtual environment with name <environment-name> and installs *requirements.txt*
+```
+conda create --name <environment-name> python=3.7 -y  --file requirements.txt
+```
+*Note: (-y flag: Does not ask for confirmation)*
+
+#### Conda utility commands
+##### Update the conda to latest version
+```
+conda update -n base -c defaults conda
+```
+
+##### Activate the environment
+```
+conda activate <environment-name>
+```
+
+##### Deactivate the environment
+```
+conda deactivate
+```
+
+##### List all the environment
+```
+conda env list
+```
+
+##### Remove the environment 
+```
+conda remove -n <ENV_NAME> --all
+```
+
+##### Conda list all the packages
+```
+conda list
+```
+
+##### Install the package from default repo
+```
+conda install <package-name>
+```
+
+##### Install the package from Specific repo
+```
+conda install -c conda-forge <package-name>
+```
+
+##### Make all conda env visible in jupyter notebook
+```
+conda install nb_conda_kernels
+```
+
+##### Create requirements.txt
+```
+conda list -e > <filename.txt>
+```
+```
+pip list --format=freeze > <filename.txt>
+```
+
+
+
+
 
 
