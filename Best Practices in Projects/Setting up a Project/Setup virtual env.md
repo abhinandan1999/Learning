@@ -77,5 +77,7 @@ pyenv deactivate
 pyenv virtualenv-delete <vir-env name>
 ```
 
+### [TO DO]: Document commands to manage Anaconda and miniconda using pyenv
+
 
 
