@@ -1,4 +1,5 @@
-### Set up Virtual Environment
+## Set up Virtual Environment
+### 1. Using Pyenv and Pyenv-virtualenv
 
 #### Install Pyenv
 It is a python version manager
