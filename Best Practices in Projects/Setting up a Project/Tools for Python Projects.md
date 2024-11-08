@@ -60,3 +60,22 @@ jblack </path/to/.ipynb/file>
 pip install isort
 ```
 
+#### Utility commands for isort
+To use isort on .py files
+```
+isort <filename1.py><filename2.py>
+```
+
+Recursively sort the imports of <.py> file in current directory
+```
+isort .
+```
+
+Shows the proposed changes without applying them
+```
+isort <filename.py> --diff
+```
+
+
+
+
