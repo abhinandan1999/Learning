@@ -1,6 +1,7 @@
-## Tools to Improve Python Project
+# Tools to Improve Python Project
+## BLACK - Format the python codes according to PEP8 guidelines
 
-### 1. BLACK - 
+### 1. black 
 #### Install black
 ```
 pip install black
@@ -39,7 +40,7 @@ To format the cell according to PEP8 guidlines use magic command at start of cel
 %% black
 ```
 
-### 3. Format .ipynb file using command line
+### 3. code format .ipynb file according to PEP8 guidelines using command line
 #### Install jupyterblack
 ```
 pip install jupyterblack
