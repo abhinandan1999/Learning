@@ -52,3 +52,11 @@ To format the .ipynb file run the command
 jblack </path/to/.ipynb/file>
 ```
 
+## ISORT - Sort the import in python according to PEP8 guidelines
+
+### 1. isort
+#### Install isort
+```
+pip install isort
+```
+
