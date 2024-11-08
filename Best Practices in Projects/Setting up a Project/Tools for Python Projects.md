@@ -146,6 +146,28 @@ Example of flake8 error Codes
     * D100: Missing docstring in public module.
     * D102: Missing docstring in public method.
  
+ ### autoflake
+ #### Install autoflake
+ ```
+ pip install autoflake
+ ```
+
+ #### Utility commands for autoflake
+ To cleanup a single file and remove unused imports
+ ```
+ autoflake --in-place <filename.py>
+ ```
+
+ To remove unused variables as well as imports
+ ```
+ autoflake --in-place --remove-unused-variables <filename.py>
+ ```
+
+## MYPY - [TODO]
+
+## BANDIT - [TODO]
+
+## POETRY - [TODO]
 
 ## NBQA - [TODO]
 
