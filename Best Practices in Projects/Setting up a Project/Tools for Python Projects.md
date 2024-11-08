@@ -169,6 +169,10 @@ Example of flake8 error Codes
 
 ## POETRY - [TODO]
 
+## Jupyter notebook
+
+## Jupyter lab
+
 ## NBQA - [TODO]
 
 
