@@ -76,6 +76,78 @@ Shows the proposed changes without applying them
 isort <filename.py> --diff
 ```
 
+## Pydocstyle - It is a static analysis tool for checking compliance with Python docstring conventions as per PEP 257.
+
+### 1. pydocstyle
+#### Install pydocstyle
+```
+pip install pydocstyle
+```
+
+#### Utility commands for pydocstyle
+To run pydocstyle check on .py file for any compliance break from PEP 257
+```
+pydocstyle --convention=[google, pep257, numpy] <filename.py>
+```
+
+## Flake8 - To check the quality and style of python code.
+
+### 1. flake8
+#### Install flake8
+```
+pip install flake8
+```
+
+#### Utility commands for flake8
+To run flake8 checks on a .py file
+```
+flake8 <filename.py>
+```
+
+To run flake8 for specified error codes use it with --select argument
+```
+flake8 --select=F401,E501 <filename.py>
+```
+
+Example of flake8 error Codes
+1. E/W Codes (from pycodestyle):
+    E: Errors (for PEP 8 style violations).
+    W: Warnings (for less severe style issues).
+
+    Examples:
+    * E501: Line too long (character limit).
+    * E302: Expected 2 blank lines, found 1.
+    * W291: Trailing whitespace.
+
+2. F Codes (from PyFlakes):
+    F: Errors related to potential bugs or logical issues in the code, such as undefined or unused variables, and imports.
+
+    Examples:
+    * F401: Module imported but unused.
+    * F821: Undefined name (variable or function used without being defined).
+    * F841: Local variable assigned but never used.
+
+3. C Codes (from McCabe Complexity):
+    C: Cyclomatic complexity-related warnings, showing where functions are too complex.
+
+    Example:
+    * C901: Function is too complex.
+
+4. B Codes (from flake8-bugbear):
+    B: Finds common bugs and bad practices in Python code.
+
+    Examples:
+    * B001: Unused loop control variable.
+    * B008: Do not perform function call in default arguments (may cause unexpected behavior).
+    * D Codes (from flake8-docstrings, if installed):
+    * D: Docstring-related checks (for PEP 257 compliance).
+
+    Examples:
+    * D100: Missing docstring in public module.
+    * D102: Missing docstring in public method.
+ 
+
+## NBQA - [TODO]
 
 
 
