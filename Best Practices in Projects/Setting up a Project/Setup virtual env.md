@@ -78,15 +78,8 @@ pyenv deactivate
 pyenv virtualenv-delete <vir-env name>
 ```
 
-### [TO DO]: Document commands to manage Anaconda and miniconda using pyenv
-
 
 ### 2. Using Conda
-
-#### Install Anaconda
-```
-[TO DO]
-```
 
 #### Create a new virtual environment
 It creates the new virtual environment with name <environment-name> and installs *requirements.txt*
