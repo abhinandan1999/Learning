@@ -119,3 +119,52 @@ Cleans the file and directory which are not added to stages or are untracked
 ```
 git clean -fd
 ``` 
+
+### Merge Related commands
+Merges the "branch name" to current branch
+```
+git merge <branch name>
+```
+
+Squash all the commits of "branch name" into 1 commit and merge to current branch
+```
+git merge --squash <branch name>
+```
+
+### Pull related commands
+Pull the changes from remote branch and merge to current branch
+```
+git pull origin <branch name>
+```
+
+Fetches data from the remote repository, updating your local copy of the remote-tracking branches (e.g., origin/main) 
+without altering your working directory or current branch.
+```
+git fetch origin
+```
+
+### Stash Related commands
+To save the changes but not commit
+```
+git stash
+```
+
+To list all the stashes
+```
+git stash list
+```
+
+To apply the most recent stash.
+```
+git stash apply
+```
+
+To apply a specific stash
+```
+git stash apply <stash-name>
+```
+
+To delete the stash
+```
+git stash drop <stash-name>
+```
