@@ -321,7 +321,7 @@ rsync options source destination
 ```
 where source and destination are one of the following:
 * A local file or directory 
-* A remote file or directory in the form of [user@]host:path 
-* A remote rsync server specified with a URI of rsync://[user@]host[:port]/path 
+* A remote file or directory in the form of ```[user@]host:path``` 
+* A remote rsync server specified with a URI of ```rsync://[user@]host[:port]/path``` 
 
 This program can synchronize both local and remote directories by using the ```rsync remote-update``` protocol, which allows rsync to quickly detect the differences between two directories and perform the minimum amount of copying required to bring them into sync. 
