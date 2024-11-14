@@ -243,12 +243,8 @@ find <directory_name> (expression1) <logical-operator> (expression2) <actions>
 ```
 ```
 <logical-operator>: [-and, -or, -not]
-```
-```
 Expression1: \(-type d -and -not -perm 0600 \)
-```
 Note: Backslash is used as parentheses have special meaning to shell. 
-```
 Actions: -print, -delete, 
 ```
 
