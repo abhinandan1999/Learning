@@ -146,7 +146,7 @@ Example of flake8 error Codes
     * D100: Missing docstring in public module.
     * D102: Missing docstring in public method.
  
- ### autoflake
+ ### 2. autoflake
  #### Install autoflake
  ```
  pip install autoflake
