@@ -202,3 +202,73 @@ docker inspect <volume_name>
 ```
 
 #### Docker network related commands
+
+* Creates a network
+```
+docker network create <network_name>
+```
+
+* List networks
+```
+docker network ls 
+```
+
+* Remove one or more networks
+```
+docker networks rm <network_name>
+```
+
+* Remove all unused networks
+```
+docker network prune 
+```
+
+* Display detailed information on one or more networks
+```
+docker network inspects <network_name>
+```
+
+* Connect a container to a network
+```
+docker network connect <network_name> <container_id>
+```
+
+* Creates a container with <Image_name> with network <network_name>
+```
+docker run -itd --net=<network_name> <Image_name>
+```
+
+#### Docker Image related commands
+
+* List all the images
+```
+docker images
+```
+
+* Remove the image
+```
+docker rmi <image_name> or <image_id>
+```
+
+* Downloads the image but won't run it
+```
+docker pull <image_name>
+```
+
+* Lists history of all the layer of images
+```
+docker history <image-name>
+```
+
+#### Executing a command inside container
+
+* Runs the <_command> in <cotainer_name or container_id>
+```
+docker exec <cotainer_name or container_id> <comand>
+```
+
+#### Docker Build related commands
+* Builds the image with name <Image_name> from <Dockerfile_name>
+```
+docker build . -f <Dockerfile name> -t <Image_name>
+```
