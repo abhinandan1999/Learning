@@ -137,7 +137,7 @@ Pull the changes from remote branch and merge to current branch
 git pull origin <branch name>
 ```
 
-Fetches data from the remote repository, updating your local copy of the remote-tracking branches (e.g., origin/main) 
+Fetches data from the remote repository, updating your local copy of the remote-tracking branches
 without altering your working directory or current branch.
 ```
 git fetch origin
