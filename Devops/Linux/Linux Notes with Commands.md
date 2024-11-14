@@ -99,38 +99,52 @@ Ex: dpkg -S /usr/bin/vim
 
 
 
-## Storage Media [TO DO]
+## Storage Media
 
 Viewing a list of mounted file system
-mount 
+```
+mount
+``` 
 It is used to mount filesystem. Without any arguments it will display all the mounted filesystem
 
 To Unmount
+```
 unmount <device_name>
+```
 
 To mount to a specific directory
+```
 mkdir /mnt/cdrom
 mount -t iso9600 <device_name> <path_to_mount>
+```
 
 Creating a new filesystem disks
+<br> </br>
 fdisk is one of a host of programs (both command line and graphical) that allow us to
 interact directly with disk-like devices (such as hard disk drives and flash drives) at a
 very low level. With this tool we can edit, delete, and create partitions on the device. To
-work with our flash drive, we must first unmount it (if needed) and then invoke the
+work with our flash drive, we must first *unmount* it (if needed) and then invoke the
 fdisk program as follows:
 
+```
 sudo fdisk <device_name>
-
+```
+```
 sudo mkfs -t ext4 [<filesystem_name>] /dev/sdb1 [<device_name>]
+```
 
 To Test and Repair filesystems
+```
 sudo fsck <device_name>
+```
 
 Moving data directly to and from Devices
+```
 dd if=input_file of=output_file [bs=block_size [count=blocks]]
-
+```
+```
 dd if=/dev/sdb of=/dev/sdc
-
+```
 
 ## Networking [TO DO]
 
