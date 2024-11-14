@@ -101,11 +101,12 @@ Ex: ```dpkg -S /usr/bin/vim```
 
 ## Storage Media
 
-* Viewing a list of mounted file system
+* Viewing a list of mounted file system <br>
+It is used to mount filesystem. Without any arguments it will display all the mounted filesystem
 ```
 mount
 ``` 
-It is used to mount filesystem. Without any arguments it will display all the mounted filesystem
+
 
 * To Unmount
 ```
@@ -183,7 +184,7 @@ netstat -ie
 
 
 #### Transporting Files Over a Network
-* It is used to transfer file over the network.
+* ftp is used to transfer file over the network.
 ```
 ftp <remoter-server-name or ip address>
 ```
