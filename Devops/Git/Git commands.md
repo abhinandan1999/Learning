@@ -112,7 +112,7 @@ git reset --hard HEAD~1
 
 Rename the latest commit message
 ```
-[TO DO]
+git commit --amend -m "New commit message"
 ```
 
 Cleans the file and directory which are not added to stages or are untracked
