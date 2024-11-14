@@ -99,3 +99,106 @@ docker run --mount type=bind, source=/source/path, target=/var/lib/mySQL mysql
 ```
 
 #### Inspecting the container
+
+* Provide details of container
+```
+docker inspect <container_name> or <container_id>
+```
+
+#### General Docker Commands
+
+* Stop the container from running
+```
+docker stop <container_name> or <container_id>
+```
+
+* Remove the stopped the container
+```
+docker rm <container_name> or <container_id>
+```
+
+* Copies file from source to destination
+```
+docker cp <source_filepath> <container_id:destination_filepath>
+```
+
+* Show all the difference in filesystem change [A-Addition, D-Deletion, C-Changed]
+```
+docker diff <container_id>
+```
+
+* List all the port mapping of the container
+```
+docker port <container_id>
+```
+
+#### Docker Monitoring commands
+
+* Display the logs of PID 1
+```
+docker logs <container_name> or <container_id>
+```
+
+* List all the running container
+```
+docker ps
+```
+
+* List the information about <container_name>
+```
+docker ps <container_name> or <container_id>
+```
+
+* List all the container (Running or Non Running)
+```
+docker ps -a
+```
+
+* Display a live stream of container(s) resource usage statistics
+```
+docker stats
+```
+
+* Display the running process of container in host machine
+```
+docker top <container_id>
+```
+
+#### Docker Volume related commands
+
+* List all the volumes created by container
+```
+docker volume ls
+```
+
+* Creates a volume
+```
+docker volume create
+```
+
+* Creates a volume with <volume_name>
+```
+docker volume create <volume_name>
+```
+
+* Remove all unused local volume
+```
+docker volume prune
+```
+
+* Persists the data in <path_in_container> to <volume_name>
+```
+docker run -v <volume_name>:<path_in_container> 
+```
+
+* Persists the data in <path_in_container> to <path_in_host_machine>
+```
+docker run -v <path_in_host_machine>:<path_in_container>
+```
+
+* Display detailed information on one or more volumes
+```
+docker inspect <volume_name>
+```
+
+#### Docker network related commands
