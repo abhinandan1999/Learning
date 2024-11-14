@@ -94,7 +94,7 @@ dpkg -S <file_name>
 ```
 rpm -qf <file_name>
 ```
-Ex: dpkg -S /usr/bin/vim
+Ex: ```dpkg -S /usr/bin/vim```
 
 
 
