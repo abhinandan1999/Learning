@@ -253,11 +253,10 @@ Note: Backslash is used as parentheses have special meaning to shell.
 find <directory_name> -exec <command> '{}' ';'
 ```
 ```
-Commands: ls, rm, etc
+1. Commands: ls, rm, etc
+2. *'{}': represents current path obtained using find, quotes are put as braces have special meaning to shell* <br>
+3. *';': represents end of command.*
 ```
-*'{}': represents current path obtained using find, quotes are put as braces have special meaning to shell* <br>
-*';': represents end of command.*
-
 * touch is used to create empty file and change file times
 ```
 touch <filename>
