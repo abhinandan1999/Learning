@@ -295,22 +295,25 @@ bzip2 <Options> <ffile1> <file2>
 ```
 tar mode[options] <tarfile> <pathname>
 ```
-<tarfile>: name of archived file. Somename.tar
+"*tarfile*": name of archived file. Ex: "*Somename.tar*"
 Modes:
-    1) c: Creates an archive from list of files and directories
-    2) x: Extract and archive
-    3) r: Append specified pathname to end of an archive
-    4) t: List the content of an archive
+* c: Creates an archive from list of files and directories
+* x: Extract and archive
+* r: Append specified pathname to end of an archive
+* t: List the content of an archive
 
 Options:
-    1) f: To specify the file
+- f: To specify the file
 
-* This is used to zip the file with name <zipfile.zip>.
-```
-zip options zipfile file …
-```
 
-* To unzip the file
+#### ZIP
+* To zip the "*file*" with name "*zipfile.zip*".
+```
+zip options zipfile file
+```
+Ex: ```zip -r playground.zip playground```
+
+* To unzip the "*zipfile*"
 ```
 unzip <zipfile>
 ```
