@@ -242,10 +242,10 @@ find <directory_name> -type [d, f] -name <pattern_of_filename> -size <+1M>
 find <directory_name> (expression1) <logical-operator> (expression2) <actions>
 ```
 ```
-<logical-operator>: [-and, -or, -not]
-Expression1: \(-type d -and -not -perm 0600 \)
+1. <logical-operator>: [-and, -or, -not]
+2. Expression1: \(-type d -and -not -perm 0600 \)
 Note: Backslash is used as parentheses have special meaning to shell. 
-Actions: -print, -delete, 
+3. Actions: -print, -delete, 
 ```
 
 * Find with USER DEFINED actions
