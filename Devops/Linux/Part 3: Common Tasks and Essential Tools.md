@@ -182,7 +182,6 @@ netstat -ie
 ```
 
 
-
 #### Transporting Files Over a Network
 * ftp is used to transfer file over the network.
 ```
@@ -225,21 +224,20 @@ sftp <remote-server-name or ip address>
 
 ## Searching for Files
 
+* The locate program performs a rapid database search of pathnames, and then outputs every name that matches a given substring
 ```
 locate  <substring>
 ```
-The locate program performs a rapid database search of pathnames, and then outputs every name that matches a given substring
 
+* find program searches a given directory (and its subdirectories) for files based on a variety of attributes
 ```
 find <directory_name>
 ```
 ```
 find <directory_name> -type [d, f] -name <pattern_of_filename> -size <+1M>
 ```
-find program searches a given directory (and its subdirectories) for files based on a variety of attributes
 
-
-Find with Operators and actions
+* Find with Operators and actions
 ```
 find <directory_name> (expression1) <logical-operator> (expression2) <actions>
 ```
@@ -254,7 +252,7 @@ Note: Backslash is used as parentheses have special meaning to shell.
 Actions: -print, -delete, 
 ```
 
-Find with USER DEFINED actions
+* Find with USER DEFINED actions
 ```
 find <directory_name> -exec <command> '{}' ';'
 ```
@@ -264,12 +262,12 @@ Commands: ls, rm, etc
 *'{}': represents current path obtained using find, quotes are put as braces have special meaning to shell* <br>
 *';': represents end of command.*
 
-Used to create empty file and change file times
+* touch is used to create empty file and change file times
 ```
 touch <filename>
 ```
 
-Display file or filesystem status
+* Display file or filesystem status
 ```
 stat <filename>
 ```
