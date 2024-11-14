@@ -5,7 +5,7 @@ There are mainly two types of packages: <br>
     2) Red Hat Style (.rpm): Fedora, CentOS,  Red hat Enterprise
 
 Package Management usually consists of two type of tools: <br>
-    1) Low level tools: which handles tasks of installing and removing package files
+    1) Low level tools: which handles tasks of installing and removing package files <br>
     2) High level tools: That searches metadata searching and dependency resolutions
 
 
