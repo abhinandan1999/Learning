@@ -157,68 +157,69 @@ A port name, or simply a port, is a numerical identifier used to specify a speci
 A host name is a unique label for a device within a local network, while a domain name is a user-friendly and hierarchical naming system used to identify resources (websites, servers, etc.) on the internet. Domain names make it easier for users to access internet resources without having to remember complex IP addresses.
 
 
-Examining and Monitoring a network
+#### Examining and Monitoring a network
+* The ping command sends a special network packet called an ICMP ECHO_REQUEST to a specified host. 
+Most network devices receiving this packet will reply to it, allowing the network connection to be verified.
 ```
 ping <host_name>
 ``` 
- The ping command sends a special network packet called an ICMP ECHO_REQUEST to a specified host. 
-Most network devices receiving this packet will reply to it, allowing the network connection to be verified.
-
+ 
+* The traceroute program (some systems use the similar tracepath program instead) lists all the “hops” network traffic takes to get from the local system to a specified host
 ```
 traceroute 
 ```
-The traceroute program (some systems use the similar tracepath program instead) lists all the “hops” network traffic takes to get from the local system to a specified host
 
+
+* With ip, we can examine a system's network interfaces and routing table.
 ```
 ip a
 ```
-With ip, we can examine a system's network interfaces and routing table.
 
+* The netstat program is used to examine various network settings and statistics.
 ```
 netstat -ie
 ```
-The netstat program is used to examine various network settings and statistics.
+
 
 
 #### Transporting Files Over a Network
+* It is used to transfer file over the network.
 ```
 ftp <remoter-server-name or ip address>
 ```
-It is used to transfer file over the network.
 
+* lftp works much like the traditional ftp program but has many additional convenience features including multipleprotocol support (including HTTP), automatic retry on failed downloads, background processes, tab completion of path names, and many more.
 ```
 lftp <remoter-server-name or ip address>
 ```
-It works much like the traditional ftp program but has many additional convenience features including multipleprotocol support (including HTTP), automatic retry on failed downloads, background processes, tab completion of path names, and many more.
 
+* wget is useful for downloading content from both web and FTP sites.
 ```
 wget
 ``` 
-It is useful for downloading content from both web and FTP sites.
-
 
 #### Secure Communication with Remote Hosts
-
+* The SSH client program used to connect to remote SSH servers. By default it listens on Port 22
 ```
 ssh <remote-server-name or ip address>
 ```
 ```
 ssh <username@remote-server-name or ip address>
 ```
-The SSH client program used to connect to remote SSH servers. By default it listens on Port 22
 
+* Scp is used to copy the files from remotehost to local machines.
 ```
 scp <remoter-server-name:path_in_server> <path_in_local>
 ```
 ```
 scp <username@remoter-server-name:path_in_server> <path_in_local>
 ```
-Scp is used to copy the files from remotehost to local machines.
 
+
+* sftp is used same as ftp only in more secure way.
 ```
 sftp <remote-server-name or ip address>
 ```
-It is used same as ftp only in more secure way.
 
 
 ## Searching for Files
