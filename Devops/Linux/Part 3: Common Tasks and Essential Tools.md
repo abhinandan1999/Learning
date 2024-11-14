@@ -268,26 +268,33 @@ stat <filename>
 ```
 
 
-## Archiving and Backup [TO DO]
+## Archiving and Backup
 
-Compressing files
+#### Compressing files
+* Gzip program is used to compress one or more files. <br>
+Options: <br>
+    - -c: Write output to stdout
+    - -d: Decompress the file
+    - -f: Force compression, if compress version already exists
+    - -h: Display usage information
+    - -l: List compressed statistics for each file compressed
+    - -r: If one more command line is a directory, recursively compress file contained within them
+    - -t: Test the integrity of a compressed file
+    - -v: Display verbose message while compressing
+    - -number: Set amount of compression. 1(fast) and 9(slowest)
+```
 gzip <options> <file1> <file2>
-Gzip program is used to compress one or more files.
-Options: -c: Write output to stdout
-                -d: Decompress the file
-                -f: Force compression, if compress version already exists
-                -h: Display usage information
-                -l: List compressed statistics for each file compressed
-                -r: If one more command line is a directory, recursively compress file contained within them
-                -t: Test the integrity of a compressed file
-                -v: Display verbose message while compressing
-               -number: Set amount of compression. 1(fast) and 9(slowest)
+```
 
+* Bzip2 works in similar way as gzip, but with higher compression and in slower time.
+```
 bzip2 <Options> <ffile1> <file2>
-Bzip2 works in similar way as gzip, but with higher compression and in slower time.
+```
 
-Archiving files
+#### Archiving files
+```
 tar mode[options] <tarfile> <pathname>
+```
 <tarfile>: name of archived file. Somename.tar
 Modes:
     1) c: Creates an archive from list of files and directories
@@ -298,16 +305,23 @@ Modes:
 Options:
     1) f: To specify the file
 
+* This is used to zip the file with name <zipfile.zip>.
+```
 zip options zipfile file …
-This is used to zip the file with name <zipfile.zip>.
+```
 
+* To unzip the file
+```
 unzip <zipfile>
-This will unzip the file
+```
 
-Synchronizing Files and Directories 
+#### Synchronizing Files and Directories
+``` 
 rsync options source destination
-where source and destination are one of the following:
-    • A local file or directory 
-    • A remote file or directory in the form of [user@]host:path 
-    • A remote rsync server specified with a URI of rsync://[user@]host[:port]/path 
+```
+where source and destination are one of the following: <br>
+    * A local file or directory 
+    * A remote file or directory in the form of [user@]host:path 
+    * A remote rsync server specified with a URI of rsync://[user@]host[:port]/path 
+
 This program can synchronize both local and remote directories by using the rsync remote-update protocol, which allows rsync to quickly detect the differences between two directories and perform the minimum amount of copying required to bring them into sync. 
