@@ -78,6 +78,16 @@ pyenv deactivate
 pyenv virtualenv-delete <vir-env name>
 ```
 
+#### Remove pyenv from system
+1. Remove the root directory
+```
+rm -rf $(pyenv root)
+```
+2. Uninstall pyenv
+```
+brew uninstall pyenv
+```
+
 
 ### 2. Using Conda
 
