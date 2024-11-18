@@ -52,6 +52,11 @@ brew install xz
 pyenv versions
 ```
 
+##### Set global version of python
+```
+pyenv global <version of python>
+``` 
+
 ##### Create Virtual Environment
 ```
 pyenv virtualenv <version of python> <vir-env name>
