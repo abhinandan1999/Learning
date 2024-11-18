@@ -41,6 +41,11 @@ pyenv install -l
 pyenv install <version of python>
 Ex: pyenv install 3.13.0
 ```
+*Note: If there is a dependecy error on module *_lzma*, then install the dependency using below command*
+```
+brew install xz
+```
+
 
 ##### List all versions of python which are installed
 ```
