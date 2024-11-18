@@ -83,7 +83,11 @@ pyenv virtualenv-delete <vir-env name>
 ```
 rm -rf $(pyenv root)
 ```
-2. Uninstall pyenv
+2. Uninstall pyenv-virtualenv
+```
+brew uninstall pyenv-virtualenv
+```
+3. Uninstall pyenv
 ```
 brew uninstall pyenv
 ```
