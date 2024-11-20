@@ -215,7 +215,7 @@ pip install jupyterlab
 jupyter lab
 ```
 
-## NBQA - 
+## NBQA - Run black, isort, mypy, flake8 and more on Jupyter Notebooks
 #### Install NBQA
 ```
 python -m pip install -U nbqa
