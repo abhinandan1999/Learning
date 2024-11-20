@@ -163,15 +163,44 @@ Example of flake8 error Codes
  autoflake --in-place --remove-unused-variables <filename.py>
  ```
 
-## MYPY - [TODO]
+## MYPY - It is a static type checker for Python.
+Type checkers help ensure that you're using variables and functions in your code correctly. With mypy, add type hints to your Python programs, and mypy will warn you when you use those types incorrectly.
+#### Install MYPY
+```
+pip install mypy
+```
+
+#### Utility commands for mypy
+To run mypy on .py file
+```
+mypy <filename.py>
+```
+### MYPY for Notebooks
+#### Install mypy for notebooks
+```
+pip install nb-mypy
+```
+
+#### Utility command to use mypy for notebooks
+Load the following extension in the cell wherever mypy is requires
+```
+%load_ext nb_mypy
+```
 
 ## BANDIT - [TODO]
 
 ## POETRY - [TODO]
 
-## Jupyter notebook
-
 ## Jupyter lab
+#### Install Jupyter Lab
+```
+pip install jupyterlab
+```
+
+#### Launch Jupyter Lab
+```
+jupyter lab
+```
 
 ## NBQA - [TODO]
 
