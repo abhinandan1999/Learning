@@ -202,7 +202,7 @@ bandit -r </dir/*.py>
 bandit -r <dir/*.ipynb>
 ```
 
-## POETRY - 
+#### Utility commands to use poetry
 
 ## Jupyter lab
 #### Install Jupyter Lab
@@ -215,7 +215,37 @@ pip install jupyterlab
 jupyter lab
 ```
 
-## NBQA - [TODO]
+## NBQA - 
+#### Install NBQA
+```
+python -m pip install -U nbqa
+```
+
+#### Utility commands to NBQA
+To use black in Jupyter Notebooks
+```
+nbqa black <notebook.ipynb>
+```
+
+To use isort in Jupyter Notebooks
+```
+nbqa isort <notebook.ipynb> --float-to-top
+```
+
+To use flake8 in jupyter notebook
+```
+nbqa flake8 <notebook.ipynb> --extend-ignore E203
+```
+
+To use mypy in jupyter notebook
+```
+nbqa mypy <notebook.ipynb> --ignore-missing-imports
+```
+
+To use pydocstyle in jupyter notebook
+```
+ nbqa pydocstyle <notebook.ipynb>
+```
 
 
 
