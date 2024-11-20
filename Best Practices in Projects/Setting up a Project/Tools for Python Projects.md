@@ -187,9 +187,22 @@ Load the following extension in the cell wherever mypy is requires
 %load_ext nb_mypy
 ```
 
-## BANDIT - [TODO]
+## BANDIT - Tool to check security issues in Python Code
+Bandit is a tool designed to find common security issues in Python code. To do this Bandit processes each file, builds an AST from it, and runs appropriate plugins against the AST nodes. Once Bandit has finished scanning all the files it generates a report.
 
-## POETRY - [TODO]
+#### Install Bandit
+```
+pip install bandit
+```
+
+#### Utility commands of Bandit
+To run the bandit on .py file or .ipynb file
+```
+bandit -r </dir/*.py>
+bandit -r <dir/*.ipynb>
+```
+
+## POETRY - 
 
 ## Jupyter lab
 #### Install Jupyter Lab
