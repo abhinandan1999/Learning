@@ -19,21 +19,17 @@ These prompts can be used to achieve various kinds of understanding and generati
     New York Manhattan with a 3 year old.*
 2. Try to use **Verbs** that describes action in your Prompts. <br>
    Example: <br>
-   Act, Analyze, Categorize, Classify, Contrast, Compare, Create, Describe, Define,
+   **Act, Analyze, Categorize, Classify, Contrast, Compare, Create, Describe, Define,
    Evaluate, Extract, Find, Generate, Identify, List, Measure, Organize, Parse, Pick,
    Predict, Provide, Rank, Recommend, Return, Retrieve, Rewrite, Select, Show, Sort,
-   Summarize, Translate, Write. 
-3. Be Specific about the Output
-   A concise instruction might not guide the LLM enough
-   or could be too generic. Providing specific details in the prompt (through system or context
-    prompting) can help the model to focus on what’s relevant, improving the overall accuracy.
-    Example:
-    DO:
-    Generate a 3 paragraph blog post about the top 5 video game consoles.
-    The blog post should be informative and engaging, and it should be
-    written in a conversational style.
-    DO NOT:
-    Generate a blog post about video game consoles.
+   Summarize, Translate, Write**
+3. Be Specific about the Output <br>
+   A concise instruction might not guide the LLM enough or could be too generic. Providing specific details in the prompt (through system or context prompting) can help the model to focus on what’s relevant, improving the overall accuracy. <br>
+    Example: <br>
+    DO: <br>
+    *Generate a 3 paragraph blog post about the top 5 video game consoles. The blog post should be informative and engaging, and it should be written in a conversational style.*
+    DO NOT: <br>
+    *Generate a blog post about video game consoles.*
 
 4. Use Instructions over Constraints
    - An instruction provides explicit instructions on the desired format, style, or content of the
