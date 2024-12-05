@@ -32,18 +32,14 @@ These prompts can be used to achieve various kinds of understanding and generati
     *Generate a blog post about video game consoles.*
 
 4. Use Instructions over Constraints
-   - An instruction provides explicit instructions on the desired format, style, or content of the
-response. It guides the model on what the model should do or produce.
-   - A constraint is a set of limitations or boundaries on the response. It limits what the model
-should not do or avoid.
-   Example:
-   DO:
-    Generate a 1 paragraph blog post about the top 5 video game consoles.
-    Only discuss the console, the company who made it, the year, and total
-    sales.
-    DO NOT:
-    Generate a 1 paragraph blog post about the top 5 video game consoles.
-    Do not list video game names.
+   - An instruction provides explicit instructions on the desired format, style, or content of the response. It guides the model on what the model should do or produce.
+   - A constraint is a set of limitations or boundaries on the response. It limits what the model should not do or avoid. <br>
+   Example: <br>
+   DO: <br>
+    *Generate a 1 paragraph blog post about the top 5 video game consoles. Only discuss the console, the company who made it, the year, and total sales.* <br>
+   DO NOT: <br>
+    *Generate a 1 paragraph blog post about the top 5 video game consoles.
+    Do not list video game names.*
 
 5. Document the various prompt attempts, Use this template and customize as per task
    | Name                            | Goal                                                | Model                     | Temperature | Token Limit | Top P     | Top K     | Prompt                | Output           |
