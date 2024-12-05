@@ -27,7 +27,7 @@ These prompts can be used to achieve various kinds of understanding and generati
    A concise instruction might not guide the LLM enough or could be too generic. Providing specific details in the prompt (through system or context prompting) can help the model to focus on what’s relevant, improving the overall accuracy. <br>
     Example: <br>
     DO: <br>
-    *Generate a 3 paragraph blog post about the top 5 video game consoles. The blog post should be informative and engaging, and it should be written in a conversational style.*
+    *Generate a 3 paragraph blog post about the top 5 video game consoles. The blog post should be informative and engaging, and it should be written in a conversational style.* <br>
     DO NOT: <br>
     *Generate a blog post about video game consoles.*
 
