@@ -11,12 +11,12 @@ These prompts can be used to achieve various kinds of understanding and generati
    not to use complex language and don’t provide unnecessary information. <br>
    Example: <br>
    BEFORE: <br>
-    I am visiting New York right now, and I'd like to hear more about great
+    *I am visiting New York right now, and I'd like to hear more about great
     locations. I am with two 3 year old kids. Where should we go during
-    our vacation? <br>
+    our vacation?* <br>
    AFTER REWRITE: <br>
-    Act as a travel guide for tourists. Describe great places to visit in
-    New York Manhattan with a 3 year old.
+    *Act as a travel guide for tourists. Describe great places to visit in
+    New York Manhattan with a 3 year old.*
 2. Try to use **Verbs** that describes action in your Prompts.
    Example: 
    Act, Analyze, Categorize, Classify, Contrast, Compare, Create, Describe, Define,
