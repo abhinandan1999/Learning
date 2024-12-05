@@ -10,10 +10,10 @@ These prompts can be used to achieve various kinds of understanding and generati
    rule of thumb, if it’s already confusing for you it will likely be also confusing for the model. Try
    not to use complex language and don’t provide unnecessary information. <br>
    Example: <br>
-   BEFORE:
+   BEFORE: <br>
     I am visiting New York right now, and I'd like to hear more about great
     locations. I am with two 3 year old kids. Where should we go during
-    our vacation?
+    our vacation? <br>
    AFTER REWRITE: <br>
     Act as a travel guide for tourists. Describe great places to visit in
     New York Manhattan with a 3 year old.
