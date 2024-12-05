@@ -42,9 +42,11 @@ These prompts can be used to achieve various kinds of understanding and generati
     Do not list video game names.*
 
 5. Document the various prompt attempts, Use this template and customize as per task. <br>
+
 | Name                            | Goal                                                | Model                     | Temperature | Token Limit | Top P     | Top K     | Prompt                | Output           |
 | ------------------------------- | --------------------------------------------------- | ------------------------- | ----------- | ----------- | --------- | --------- | --------------------- | ---------------- |
 | Name and Version of your Prompt | One sentence Explanation of the goal of this prompt | Name and Version of Model | Parameter   | Parameter   | Parameter | Parameter | Write Complete Prompt | Write the Output |
+
 
    
 
