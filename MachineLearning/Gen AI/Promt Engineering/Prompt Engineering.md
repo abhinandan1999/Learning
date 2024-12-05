@@ -17,8 +17,8 @@ These prompts can be used to achieve various kinds of understanding and generati
    AFTER REWRITE: <br>
     *Act as a travel guide for tourists. Describe great places to visit in
     New York Manhattan with a 3 year old.*
-2. Try to use **Verbs** that describes action in your Prompts.
-   Example: 
+2. Try to use **Verbs** that describes action in your Prompts. <br>
+   Example: <br>
    Act, Analyze, Categorize, Classify, Contrast, Compare, Create, Describe, Define,
    Evaluate, Extract, Find, Generate, Identify, List, Measure, Organize, Parse, Pick,
    Predict, Provide, Rank, Recommend, Return, Retrieve, Rewrite, Select, Show, Sort,
