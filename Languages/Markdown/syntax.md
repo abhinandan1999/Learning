@@ -124,3 +124,8 @@ To create a table, use the pipe symbols as follows and for alignment use colon s
 | Name | Description | Comments |
 |:-------|:-------------:|-------------:|
 | Hello  | World          | India           |
+
+#### <u>Latex Syntax</u>
+Text can be converted to latex by encapsulating it between \$$ text $$ text <br>
+Example:
+$$ P(w) $$
