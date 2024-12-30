@@ -19,6 +19,18 @@ Get the current status of Repo
 git status
 ```
 
+### Clone a repo commands
+Clone a public repo
+```
+git clone <private_repo.git>
+```
+
+Clone a private repo
+```
+git clone https://<PAT>@github.com/<your account or organization>/<private_repo.git>
+```
+Note: *PAT has to be generated in github settings*
+
 ### Git branch related commands
 List down all the branch created locally and marks your current branch
 ```
