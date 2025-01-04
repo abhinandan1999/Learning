@@ -138,9 +138,7 @@ def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
         top_n (int): Number of Top n occuring values in a attribute of DataFrame
 
     Returns:
-        tuple:
-            - pd.DataFrame: A summary DataFrame containing feature name, unique value count, uniqueness ratio, percentage of null values, null bucket, and data type.
-            - pd.DataFrame: A summary of the null value buckets.
+        pd.DataFrame: A summary DataFrame containing feature name, data type, unique value count, uniqueness ratio, percentage of null values and top N Values
     """
 
     # Get Data Types of Columns
