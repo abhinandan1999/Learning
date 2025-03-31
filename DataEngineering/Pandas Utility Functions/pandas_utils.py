@@ -128,6 +128,24 @@ def _get_top_n_values(df: pd.DataFrame, top_n: int) -> pd.DataFrame:
 
     return value_counts_df
 
+def _get_col_order(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Generate a DataFrame indicating the order of columns in the given DataFrame.
+
+    Parameters:
+    df (pd.DataFrame): The input DataFrame.
+
+    Returns:
+    pd.DataFrame: A DataFrame with two columns:
+        - "Attribute Name": Names of the columns in `df`
+        - "order": The corresponding column order (starting from 1)
+    """
+    order_df = pd.DataFrame({
+        "Attribute Name": df.columns,
+        "order": np.arange(1, len(df.columns) + 1)  # Fixed typo here
+    })
+
+    return order_df
 
 def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
     """
@@ -140,6 +158,8 @@ def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
     Returns:
         pd.DataFrame: A summary DataFrame containing feature name, data type, unique value count, uniqueness ratio, percentage of null values and top N Values
     """
+    # Keep the column order same as Dataframe
+    col_order_df = _get_col_order(df)
 
     # Get Data Types of Columns
     dataType_df = _get_dtypes(df)
@@ -160,6 +180,6 @@ def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
     }
     attribute_summary_df = combine_dfs(dfs, join_kw=join_kw)
 
-    return attribute_summary_df
+    return attribute_summary_df.sort_values(["order"], ascending=True).drop(columns=["order"])
 
     
