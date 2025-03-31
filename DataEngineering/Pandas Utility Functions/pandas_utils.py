@@ -113,7 +113,11 @@ def _get_top_n_values(df: pd.DataFrame, top_n: int) -> pd.DataFrame:
             .values
         )
 
-        return top_n_values
+        top_n_dict = {}
+        for ele in top_n_values:
+            top_n_dict.update(ele)
+
+        return top_n_dict
 
     value_counts_dict = {}
     for col in df.columns:
@@ -123,11 +127,15 @@ def _get_top_n_values(df: pd.DataFrame, top_n: int) -> pd.DataFrame:
     value_counts_df = (
         pd.DataFrame.from_dict(value_counts_dict, orient="index")
         .reset_index(names="Attribute Name")
-        .rename(columns={0: f"Top {top_n} values"})
+        .rename(columns={0: f"Top {top_n} values with count"})
+    )
+
+    value_counts_df[f"Top {top_n} values"] = value_counts_df[f"Top {top_n} values with count"].apply(
+        lambda x: lambda x: [key for key in x.keys()]
     )
 
     return value_counts_df
-
+    
 def _get_col_order(df: pd.DataFrame) -> pd.DataFrame:
     """
     Generate a DataFrame indicating the order of columns in the given DataFrame.
