@@ -131,11 +131,11 @@ def _get_top_n_values(df: pd.DataFrame, top_n: int) -> pd.DataFrame:
     )
 
     value_counts_df[f"Top {top_n} values"] = value_counts_df[f"Top {top_n} values with count"].apply(
-        lambda x: lambda x: [key for key in x.keys()]
+        lambda x: [key for key in x.keys()]
     )
 
     return value_counts_df
-    
+
 def _get_col_order(df: pd.DataFrame) -> pd.DataFrame:
     """
     Generate a DataFrame indicating the order of columns in the given DataFrame.
