@@ -47,7 +47,7 @@ def _get_dtypes(df):
     ft_dtype = df.dtypes
     ft_dtype_df = pd.DataFrame({
         'Attribute Name': ft_dtype.index,
-        'Data Type': ft_dtype.index.values
+        'Data Type': ft_dtype.values
     })
 
     return ft_dtype_df
@@ -147,7 +147,7 @@ def _get_col_order(df: pd.DataFrame) -> pd.DataFrame:
 
     return order_df
 
-def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
+def get_df_summary(df:pd.DataFrame, filename: str='filename', top_n: int=5) -> pd.DataFrame:
     """
     Generate the summaries of the attributes in a pandas DataFrame.
 
@@ -179,7 +179,11 @@ def get_df_summary(df:pd.DataFrame, top_n: int=5) -> pd.DataFrame:
         'how': 'outer'
     }
     attribute_summary_df = combine_dfs(dfs, join_kw=join_kw)
+    attribute_summary_df = attribute_summary_df.sort_values(["order"], ascending=True).drop(columns=["order"])
 
-    return attribute_summary_df.sort_values(["order"], ascending=True).drop(columns=["order"])
+    # Insert filename at starting
+    attribute_summary_df.insert(1, "filename", filename)
+
+    return attribute_summary_df
 
     
