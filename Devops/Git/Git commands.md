@@ -42,6 +42,16 @@ List down all remote branches
 git branch -a
 ```
 
+List all the branch that have merged to <main_branch>
+```
+git branch --merged <main_branch>
+```
+
+List all the branch sorted by last commit.
+```
+git branch --sort=-committerdate
+```
+
 Creates a branch with name "branch name" from current branch
 ```
 git branch <branch name>
@@ -65,6 +75,11 @@ git branch -d <branch name>
 Forcefully deletes the branch
 ```
 git branch -D <branch name>
+```
+
+Delete the branch that have been merged to <main_branch>
+```
+git branch --merged <main_branch> | grep -v '\*' | xargs -n 1 git branch -d
 ```
 
 Renames the current branch to "new name"
