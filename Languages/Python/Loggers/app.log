@@ -1,0 +1,20 @@
+2025-05-27 01:57 - WARNING - Save me!
+2025-05-27 01:57 - ERROR - Something went wrong!
+2025-05-27 02:04 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "/var/folders/t8/kwl37c951n7b2z9qz3hgb0n80000gn/T/ipykernel_41936/2113344397.py", line 20, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-05-27 02:06 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "/var/folders/t8/kwl37c951n7b2z9qz3hgb0n80000gn/T/ipykernel_41936/2113344397.py", line 20, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-05-27 02:07 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "/var/folders/t8/kwl37c951n7b2z9qz3hgb0n80000gn/T/ipykernel_41936/3171739866.py", line 20, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
