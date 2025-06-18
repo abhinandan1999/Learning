@@ -88,8 +88,35 @@ class LinkedList:
 
     def insert(self, data, index):
         """Insert the Element at a specific Index"""
-        pass
+        
+        # Check if the Index is greater than Length of Linked List + 1
+        if index > self.len:
+            raise Exception(f"Index {index} is greater than Linked List of length {self.len}")
+        
+        else:
+            
+            # Create an instance of Node
+            node_to_insert = Node(data)  
 
+            # Travel to the Index
+            node = head = self.head
+            curr_pos = 0
+            while curr_pos < index-1:
+                node = node.next
+                curr_pos += 1
+
+            # Set the Next Node
+            if index == 0:
+                self.head = node_to_insert
+                node_to_insert.next = node
+            else:
+                node_to_insert.next = node.next
+                node.next = node_to_insert
+
+
+            # Increment the Length of Linked List by 1
+            self.len += 1
+                
     def remove(self, data):
         """Deletes the specific Data if found"""
         pass
@@ -102,12 +129,25 @@ class LinkedList:
 def main():
 
     # Instantiate a LinkedList
-    linked_list = LinkedList(["1", "2", "3"])
+    linked_list = LinkedList(["1", "2", "3", "4"])
+    print(f"Intial Linked List of length {len(linked_list)} {linked_list}\n")
 
-    print(type(linked_list))
-    print(linked_list)
-    print(len(linked_list))
+    print(f"Inserting {10} at Index {0}")
+    linked_list.insert("10", 0)
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
+    
+    print(f"Inserting {20} at Index {1}")
+    linked_list.insert("20", 1)
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
 
+    print(f"Inserting {40} at Index {4}")
+    linked_list.insert("40", 4)
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
+
+    print(f"Inserting {100} at Index {len(linked_list)}")
+    linked_list.insert("100", len(linked_list))
+    print(f"Linked List of length {len(linked_list)} {linked_list}")
+    
     # for ele in linked_list:
     #     print(ele)
 
