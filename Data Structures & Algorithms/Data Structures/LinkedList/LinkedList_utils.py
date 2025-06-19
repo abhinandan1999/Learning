@@ -188,6 +188,9 @@ class LinkedList:
         self.len += 1
 
         return 
+    
+    def insert_index(self, data, index):
+        pass
                 
     def remove(self, data):
         """Deletes the specific Data if found"""
