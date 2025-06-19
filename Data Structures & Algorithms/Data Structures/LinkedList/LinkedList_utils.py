@@ -140,7 +140,7 @@ class LinkedList:
 
         return
 
-    def insertBefore(self, data, index):
+    def insert_index_before(self, data, index):
         # TC: O(n)
         # SC: O(1)
         # Check if the Index is within Range
@@ -167,7 +167,7 @@ class LinkedList:
 
         return 
 
-    def inserAfter(self, data, index):
+    def insert_index_after(self, data, index):
         # TC: O(1)
         # SC: O(1)
         # Check if the Index is within Range
@@ -189,7 +189,8 @@ class LinkedList:
 
         return 
     
-    def insert_index(self, data, index):
+    def insert(self, data, target_data, type="before"):
+        
         pass
                 
     def remove(self, data):
@@ -227,6 +228,8 @@ class LinkedList:
 
     def remove_index(self, index):
         """Removes the specific Index"""
+        # TC: O(N)
+        # SC: O(1)
 
         # Check if the Index is within Range
         if (index < 0) or (index > self.len - 1):
@@ -264,11 +267,11 @@ def main():
     print(f"Linked List of length {len(linked_list)} {linked_list}\n")
 
     print(f"Inserting {40} before index 4")
-    linked_list.insertBefore("40", 4)
+    linked_list.insert_index_before("40", 4)
     print(f"Linked List of length {len(linked_list)} {linked_list}\n")
 
     print(f"Inserting {100} at after Index 2")
-    linked_list.inserAfter("100", 6)
+    linked_list.insert_index_after("100", 6)
     print(f"Linked List of length {len(linked_list)} {linked_list}\n")
     
     print(f"Removing 40 from the Linked List")
@@ -277,7 +280,9 @@ def main():
 
     print(f"Removing from index 3")
     linked_list.remove_index(6)
-    print(f"Linked List of length {len(linked_list)} {linked_list}")
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
+
+    
     # for ele in linked_list:
     #     print(ele)
 
