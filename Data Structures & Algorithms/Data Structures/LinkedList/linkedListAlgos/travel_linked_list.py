@@ -1,11 +1,12 @@
 from LinkedList import LinkedList
+from typing import List
 
-def recursive_travel(llist: LinkedList) -> None:
+def recursive_travel(llist: LinkedList) -> List[str]:
     """Algorithm to Travel Linked List Recursively"""
 
     # Base Condition
     if not llist.head:
-        return
+        return []
     
     print(llist.head.data)
     llist.head = llist.head.next
