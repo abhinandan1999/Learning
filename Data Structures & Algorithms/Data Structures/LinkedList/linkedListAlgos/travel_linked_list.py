@@ -1,4 +1,4 @@
-from linkedListAlgos.LinkedList_utils import LinkedList
+from LinkedList_utils import LinkedList
 
 
 def main():
