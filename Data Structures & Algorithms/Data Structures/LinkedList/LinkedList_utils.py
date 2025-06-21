@@ -190,8 +190,58 @@ class LinkedList:
         return 
     
     def insert(self, data, target_data, type="before"):
+        """Insert a Node based on the type relative to the data"""
+        # TC: O(N)
+        # SC: O(1)
+
+        if not self.head:
+            raise Exception("Linked List is empty")
         
-        pass
+        # Create a New Node
+        new_node = Node(data)
+
+        # Check if target_data is Present on Head
+        if type == "before":
+            if self.head.data == target_data:
+                self.insertBeg(data)
+
+                # Update the length
+                self.len += 1
+                return
+
+            else:
+                # Travel till you reach data
+                previous_node = self.head
+                for current_node in self:
+                    if current_node.data == target_data:
+                        previous_node.next = new_node
+                        new_node.next = current_node
+
+                        # Increase the length
+                        self.len += 1
+                        return
+                    # Move the Previous node    
+                    previous_node = current_node
+            
+            raise Exception(f"Data {data} could not be inserted as {target_data} is not found in the linked List")
+        
+        elif type == "after":
+
+            # Travel till you find the data
+            for current_node in self:
+                if current_node.data == target_data:
+                    new_node.next = current_node.next
+                    current_node.next = new_node
+
+                    # Increment the length
+                    self.len += 1
+                    return
+                
+            raise Exception(f"Data {data} could not be inserted as {target_data} is not found in the linked List")
+        
+        else:
+            raise Exception(f"Please specify the type to be before/after")
+        
                 
     def remove(self, data):
         """Deletes the specific Data if found"""
@@ -282,10 +332,14 @@ def main():
     linked_list.remove_index(6)
     print(f"Linked List of length {len(linked_list)} {linked_list}\n")
 
+    print(f"Insert 33 before 20")
+    linked_list.insert("33", "20", type="before")
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
+
+    print(f"Insert 500 after 2")
+    linked_list.insert("500", "2", type="after")
+    print(f"Linked List of length {len(linked_list)} {linked_list}\n")
     
-    # for ele in linked_list:
-    #     print(ele)
-
-
+    
 if __name__ == "__main__":
     main()
