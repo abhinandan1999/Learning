@@ -6,6 +6,8 @@ from typing import List
 
 def recursive_travel(head: Node) -> List[str]:
     """Algorithm to Travel Linked List Recursively"""
+    # TC: O(N)
+    # SC: O(N)
 
     # Base Condition
     if not head:
