@@ -300,6 +300,34 @@ class LinkedList:
         current_node.next = current_node.next.next
         self.len -= 1
         return 
+    
+    def get(self, data, type="data"):
+        """Get Element from the Linked List either by data or by Index"""
+
+        if type == "data":
+            idx = -1
+            for current_node in self:
+                idx += 1
+                if current_node.data == data:
+                    return (data, idx)
+            
+            raise Exception(f"Data {data} not found in Linked List")
+        
+        elif type == "index":
+            idx = data
+            if idx > self.len - 1:
+                raise Exception(f"Index {data} is out of Range. Length of Linked List is {self.len}")
+            
+            current_node = self.head
+            for _ in range(0, idx):
+                current_node = current_node.next
+            
+            return (current_node.data, idx)
+            
+        else:
+            raise Exception(f"Only data/index type is supported")
+            
+
 
 
 def main():
@@ -339,6 +367,9 @@ def main():
     print(f"Insert 500 after 2")
     linked_list.insert("500", "2", type="after")
     print(f"Linked List of length {len(linked_list)} {linked_list}\n")
+
+    print(linked_list.get("500", type="data"))
+    print(linked_list.get(0, type="index"))
     
     
 if __name__ == "__main__":
