@@ -1,3 +1,3 @@
-from .LinkedList_utils import LinkedList
+from .LinkedList_utils import LinkedList, Node
 
 __all__ = ["LinkedList"]

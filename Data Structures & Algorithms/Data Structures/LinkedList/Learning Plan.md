@@ -25,8 +25,8 @@
 
 ### 🔹 Traversal & Search
 - [ ] Traverse iteratively - _Done_
-- [ ] Traverse recursively
-- [ ] Search for a value
+- [ ] Traverse recursively - _Done_
+- [ ] Search for a value - 
 
 ### 🔹 Other Basics
 - [ ] Get length (iterative) - _Done_

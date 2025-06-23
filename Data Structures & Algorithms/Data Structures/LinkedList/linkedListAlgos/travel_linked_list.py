@@ -1,27 +1,37 @@
-from LinkedList import LinkedList
+# python -m LinkedList.linkedListAlgos.travel_linked_list
+
+from LinkedList import LinkedList, Node
 from typing import List
 
-def recursive_travel(llist: LinkedList) -> List[str]:
+
+def recursive_travel(head: Node) -> List[str]:
     """Algorithm to Travel Linked List Recursively"""
 
     # Base Condition
-    if not llist.head:
+    if not head:
         return []
     
-    print(llist.head.data)
-    llist.head = llist.head.next
-    recursive_travel(llist=llist)
+    # Get the Current Element
+    collected_element = [head.data]
 
-    return
+    # Call the function again
+    res = recursive_travel(head.next)
+
+    # Merge with Previous Result
+    collected_element += res
+    
+    return collected_element
 
 def main():
 
     # Create a Linked List
     llist = LinkedList(["1", "2", "3", "443432432432"])
 
-    recursive_travel(llist)
+    rec_travel_res = recursive_travel(llist.head)
 
+    print(rec_travel_res)
     print(llist)
     
 if __name__ == "__main__":
     main()
+    
