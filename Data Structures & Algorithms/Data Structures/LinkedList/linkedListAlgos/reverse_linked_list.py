@@ -1,6 +1,6 @@
 # python -m LinkedList.linkedListAlgos.reverse_linked_list
 
-from LinkedList import LinkedList
+from LinkedList import Node, LinkedList
 
 def reverse_linked_list_iterative(llist: LinkedList) -> LinkedList:
     """Iteratively reverse a Linked List"""
@@ -31,7 +31,7 @@ def reverse_linked_list_iterative(llist: LinkedList) -> LinkedList:
 
     return llist
 
-def reverse_linked_list_recursively(head: LinkedList):
+def reverse_linked_list_recursively(head: Node):
     """Reverse a Linked List Recursively"""
     # TC: O(N)
     # SC: O(N)
@@ -48,6 +48,10 @@ def reverse_linked_list_recursively(head: LinkedList):
     head.next = None
 
     return rest
+
+def reverse_sub_linked_list(llist: LinkedList, m: int, n: int):
+    """Reverse the Linked between m and n"""
+    pass
 
 
 def main():

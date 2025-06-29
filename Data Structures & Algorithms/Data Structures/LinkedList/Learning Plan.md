@@ -31,8 +31,8 @@
 ### 🔹 Other Basics
 - [ ] Get length (iterative) - _Done_
 - [ ] Get length (recursive) - _Done_
-- [ ] Reverse the list (iterative) - 
-- [ ] Reverse the list (recursive) - 
+- [ ] Reverse the list (iterative) - _Done_
+- [ ] Reverse the list (recursive) - _Done_
 
 ---
 
