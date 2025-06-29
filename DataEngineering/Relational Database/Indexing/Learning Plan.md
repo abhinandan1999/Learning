@@ -3,7 +3,6 @@
 - Index types & algorithms
 - Query optimization
 - Index strategies for different filters
-- Real-world hands-on practice
 
 ---
 
