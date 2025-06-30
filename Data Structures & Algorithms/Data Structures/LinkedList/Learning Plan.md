@@ -38,8 +38,8 @@
 
 ## 3. Intermediate Techniques
 
-- [ ] Reverse a sublist between positions `m` and `n`
-- [ ] Find middle node using slow and fast pointers
+- [ ] Reverse a sublist between positions `m` and `n` - _Done_
+- [ ] Find middle node using slow and fast pointers - 
 - [ ] Detect cycle using Floyd’s algorithm
 - [ ] Remove a cycle
 - [ ] Find the start node of a cycle
