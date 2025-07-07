@@ -41,9 +41,9 @@
 - [ ] Reverse a sublist between positions `m` and `n` - _Done_
 - [ ] Find middle node using slow and fast pointers - _Done_
 - [ ] Detect cycle using Floyd’s algorithm - _Done_
-- [ ] Remove a cycle
-- [ ] Find the start node of a cycle
-- [ ] Merge two sorted linked lists
+- [ ] Remove a cycle - _Done_
+- [ ] Find the start node of a cycle - _Done_
+- [ ] Merge two sorted linked lists - _Done_
 - [ ] Remove duplicates from sorted list
 - [ ] Remove duplicates from unsorted list (use set or hashmap)
 - [ ] Find `k`-th node from the end (two-pointer approach)
