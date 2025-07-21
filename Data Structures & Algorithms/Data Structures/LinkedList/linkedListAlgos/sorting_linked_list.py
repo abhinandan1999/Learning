@@ -3,7 +3,7 @@
 from LinkedList import LinkedList, Node
 
 
-def merge_sorted_ll_recursive(Llist1_head: LinkedList, Llist2_head: LinkedList) -> LinkedList:
+def merge_sorted_ll_recursive(Llist1_head: Node, Llist2_head: Node) -> Node:
     """Recursively merge two sorted Linked List"""
     # TC: O(1)
     # SC: O(M+N) Due to memory consumed by recursive stack
@@ -30,7 +30,7 @@ def merge_sorted_ll_recursive(Llist1_head: LinkedList, Llist2_head: LinkedList) 
     
 
 
-def merge_sorted_ll(Llist1_head: LinkedList, Llist2_head: LinkedList) -> LinkedList:
+def merge_sorted_ll(Llist1_head: Node, Llist2_head: Node) -> Node:
     """
     Merge two sorted linked List
     """
@@ -91,19 +91,29 @@ def main():
     llist2 = LinkedList(["0", "0", "3"])
     print(f"Linked List 2: {llist2}")
 
-    # # Sorted Linked List
-    # sorted_llist_head = merge_sorted_ll(Llist1_head=llist1.head, Llist2_head=llist2.head)
-    # sorted_llist_data = []
-    # while sorted_llist_head:
-    #     sorted_llist_data.append(sorted_llist_head.data)
-    #     sorted_llist_head = sorted_llist_head.next
+    # Sorted Linked List
+    sorted_llist_head = merge_sorted_ll(Llist1_head=llist1.head, Llist2_head=llist2.head)
+    sorted_llist_data = []
+    while sorted_llist_head:
+        sorted_llist_data.append(sorted_llist_head.data)
+        sorted_llist_head = sorted_llist_head.next
 
-    # sorted_llist = LinkedList(sorted_llist_data)
-    # print(f"Sorted Merged Linked List: {sorted_llist}")
+    sorted_llist = LinkedList(sorted_llist_data)
+    print(f"Sorted Merged Linked List: {sorted_llist}")
 
 
     # Sorted Linked List Recursively
-    sorted_llist_head_rec = merge_sorted_ll_recursive(Llist1_head=llist1.head, Llist2_head=llist2.head)
+
+    # Initialise Linked List 1
+    llist1_rec = LinkedList(["1", "1", "4"])
+    print(f"Linked List 1: {llist1}")
+
+    # Initialise Linked List 2
+    llist2_rec = LinkedList(["0", "0", "3"])
+    print(f"Linked List 2: {llist2}")
+
+
+    sorted_llist_head_rec = merge_sorted_ll_recursive(Llist1_head=llist1_rec.head, Llist2_head=llist2_rec.head)
     sorted_llist_data_rec = []
     while sorted_llist_head_rec:
         sorted_llist_data_rec.append(sorted_llist_head_rec.data)

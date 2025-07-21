@@ -76,10 +76,3 @@
 - [ ] Write unit tests using `unittest` or `pytest`
 
 ---
-
-## 6. Practice & Real-world Readiness
-
-- [ ] Apply linked list in:
-  - [ ] LRU Cache implementation
-  - [ ] Browser history design
-  - [ ] Undo/redo stack in editor
