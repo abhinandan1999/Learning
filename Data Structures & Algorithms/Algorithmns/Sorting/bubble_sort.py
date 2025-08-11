@@ -2,8 +2,13 @@
 from typing import List
 
 def bubble_sort(list: List) -> List:
+    """Sort the list with bubble sort algorithm"""
+    # TC: O()
+    # SC: O()
 
-    return list
+    sorted_list = list
+    
+    return sorted_list
 
 def main():
 
