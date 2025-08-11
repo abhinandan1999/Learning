@@ -44,13 +44,13 @@
 - [ ] Remove a cycle - _Done_
 - [ ] Find the start node of a cycle - _Done_
 - [ ] Merge two sorted linked lists - _Done_
-- [ ] Remove duplicates from sorted list
-- [ ] Remove duplicates from unsorted list (use set or hashmap)
-- [ ] Find `k`-th node from the end (two-pointer approach)
-- [ ] Check if a linked list is a palindrome (stack or reverse second half)
+- [ ] Remove duplicates from sorted list - _Done_
+- [ ] Remove duplicates from unsorted list (use set or hashmap) - _Done_
+- [ ] Find `k`-th node from the end (two-pointer approach) - _Done_
+- [ ] Check if a linked list is a palindrome (stack or reverse second half) - _Done_
 - [ ] Delete a node without head pointer (not Pythonic but for practice)
 - [ ] Clone a linked list with random pointers (using dictionary mapping)
-- [ ] Find the intersection node of two linked lists
+- [ ] Find the intersection node of two linked lists - _Done_
 - [ ] Partition list around a value `x`
 
 ---
@@ -59,9 +59,9 @@
 
 - [ ] Merge K sorted linked lists (use `heapq`)
 - [ ] Flatten a multilevel doubly linked list
-- [ ] Implement LRU Cache using `OrderedDict` or Doubly Linked List + Dict
+- [ ] Implement LRU Cache using `OrderedDict` or Doubly Linked List + Dict # TODO
 - [ ] Reverse nodes in k-group
-- [ ] Rotate list to the right by k places
+- [ ] Rotate list to the right by k places # TODO
 - [ ] Reorder list: L0 → Ln → L1 → Ln-1 → ...
 - [ ] Implement Skip List (Optional for system-level design)
 - [ ] Implement XOR linked list using `ctypes` (advanced Python)
