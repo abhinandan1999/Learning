@@ -82,7 +82,36 @@ class LRUCache():
             self._add_to_head(new_node)
             
 
+from collections import OrderedDict
+class LRUCache_ordered_dict:
 
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key):
+
+        # Check if key is present in cache
+        if key not in self.cache:
+            return -1
+            
+        # Move this key to head
+        self.cache.move_to_end(key=key)
+        return self.cache[key]
+    
+    def put(self, key, value):
+
+        # Check if this key is already present
+        if key in self.cache:
+            self.cache.move_to_end[key]
+        else:
+            # Check if capacity is reached
+            if len(self.cache) > self.capacity:
+                # Remove the Least Recently Used data
+                self.cache.popitem(last=False)
+                
+        # Move this key to end
+        self.cache[key] = value
 
 
 def main():
@@ -94,7 +123,7 @@ def main():
     cache.put(1, 10)      # DLL: 1 → 
     cache.put(2, 20)      # DLL: 2 → 1
     print(cache.get(1))   # returns 10, DLL: 1 → 2
-    
+
     cache.put(3, 30)      # evicts 2, DLL: 3 → 1
     print(cache.get(2))   # returns -1
 

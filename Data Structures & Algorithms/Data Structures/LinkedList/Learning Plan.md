@@ -59,9 +59,9 @@
 
 - [ ] Merge K sorted linked lists (use `heapq`)
 - [ ] Flatten a multilevel doubly linked list
-- [ ] Implement LRU Cache using `OrderedDict` or Doubly Linked List + Dict # TODO
+- [ ] Implement LRU Cache using `OrderedDict` or Doubly Linked List + Dict
 - [ ] Reverse nodes in k-group
-- [ ] Rotate list to the right by k places # TODO
+- [ ] Rotate list to the right by k places
 - [ ] Reorder list: L0 → Ln → L1 → Ln-1 → ...
 - [ ] Implement Skip List (Optional for system-level design)
 - [ ] Implement XOR linked list using `ctypes` (advanced Python)
