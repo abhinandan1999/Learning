@@ -7,6 +7,20 @@ def remove_duplicates(Llist_head: Node) -> Node:
     # TC: O()
     # SC: O()
 
+    # Define the first node and next node
+    curr_node = Llist_head
+    next_node = Llist_head.next
+
+    # Iterate till next node is not null
+    while next_node:
+        # Keep Moving until next node is same as curr node
+        while next_node and (curr_node.data == next_node.data):
+            next_node = next_node.next
+
+        # Adjust the pointer
+        curr_node.next = next_node
+        curr_node = curr_node.next
+
     return Llist_head
 
 def remove_duplicates_recursive(Llist_head: Node) -> Node:
@@ -29,17 +43,28 @@ def remove_duplicates_recursive(Llist_head: Node) -> Node:
 def main():
 
     # Initialise a sorted Linked List
-    Llist = LinkedList(["1", "1", "2", "2", "3"])
+    Llist = LinkedList(["1", "1", "2", "2", "2"])
     print(f"Sorted Linked List: {Llist}")
 
-    deduped_llist_head = remove_duplicates_recursive(Llist_head=Llist.head)
-    deduped_llist_data = []
-    while deduped_llist_head:
-        deduped_llist_data.append(deduped_llist_head.data)
-        deduped_llist_head = deduped_llist_head.next
+    # deduped_llist_head = remove_duplicates_recursive(Llist_head=Llist.head)
+    # deduped_llist_data = []
+    # while deduped_llist_head:
+    #     deduped_llist_data.append(deduped_llist_head.data)
+    #     deduped_llist_head = deduped_llist_head.next
 
-    deduped_llist = LinkedList(deduped_llist_data)
-    print(f"Deduped Sorted Linked List: {deduped_llist}")
+    # deduped_llist = LinkedList(deduped_llist_data)
+    # print(f"Deduped Sorted Linked List: {deduped_llist}")
+
+
+    # Dedupe Llinked List Iteratively
+    deduped_llist = remove_duplicates(Llist.head)
+    deduped_llist_iter_data = []
+    while deduped_llist:
+        deduped_llist_iter_data.append(deduped_llist.data)
+        deduped_llist = deduped_llist.next
+
+    deduped_llist_iter = LinkedList(deduped_llist_iter_data)
+    print(f"Deduped Sorted Linked List iteratively: {deduped_llist_iter}")
 
 if __name__ == "__main__":
     main()
