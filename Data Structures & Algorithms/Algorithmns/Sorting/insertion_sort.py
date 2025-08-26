@@ -24,6 +24,7 @@ def insertion_sort(list_: List) -> List:
     """
     # TC: O(N^2)
     # SC: O(1)
+    # Stable Sorting
 
     # Get Number of elements of List
     n = len(list_)

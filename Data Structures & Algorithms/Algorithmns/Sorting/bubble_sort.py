@@ -5,6 +5,7 @@ def bubble_sort(list_: List) -> List:
     """Sort the list with bubble sort algorithm"""
     # TC: O(N^2)
     # SC: O(1)
+    # Stable Sorting
 
     # Get Length of the list
     n = len(list_)
