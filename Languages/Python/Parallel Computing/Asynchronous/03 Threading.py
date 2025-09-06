@@ -207,6 +207,49 @@ if __name__ == "__main__4":
 # | Flexibility                 | Less flexible (single function only)          | More flexible (any callable, varying args) |
 
 
+
+# xxxxxxxxxxxxxxxxxxxxxxx CRITICAL SECTIONS xxxxxxxxxxxxxxxxxxxx
+"""
+A Critical Section is a block of code where a thread access shared resources (like variables, list, files, database, sockets)
+that must not be accessed by more than one thread at the same time.
+
+If two or more threads enter the critical section at the same time then you get race condition - unpredictable and incorrect results.
+
+In the given Example below: balance is a race condition
+"""
+
+import threading
+
+def main():
+    balance = 100
+    def withdraw(amount):
+        nonlocal balance
+        # Simulate withdrawal many time
+        print(f"Thread: Initial Balance is: {balance}")
+        for _ in range(10_000):
+            if amount <= balance:
+                balance -= amount
+
+    print(f"Initial Balance is: {balance}")
+
+    # Create Threads
+    threads = []
+    for _ in range(2):
+        t = threading.Thread(target=withdraw, args=(10,))
+        threads.append(t)
+        t.start()
+
+    # Wait for thread to finish
+    for t in threads:
+        t.join()
+
+    # Display Final Balance
+    print(f"Final Balance is: {balance}")
+
+if __name__ == "__main__":
+    main()
+
+
 # xxxxxxxxxxxxxxxxxxxxxxx DEADLOCKS xxxxxxxxxxxxxxxxxxxx
 """
 A deadlock in programming happens when two or more threads (or processes) are waiting indefinitely
@@ -266,7 +309,7 @@ def thread_2_ordered():
         with lock_b:
             print(f"Thread 2: Acquired Lock B")
 
-if __name__ == "__main__":
+if __name__ == "__main__6":
 
     t1 = threading.Thread(target=thread_1)
     t2 = threading.Thread(target=thread_2)
