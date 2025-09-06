@@ -5,6 +5,7 @@ import logging
 import threading
 from concurrent.futures import ThreadPoolExecutor
 import time
+import queue
 
 SENTINEL = object()
 
@@ -61,6 +62,28 @@ class Pipeline:
         self.consumer_lock.release()
         logging.debug("%s:getlock released", name)
 
+def producer_queue(pipeline, event):
+
+    while not event.is_set():
+        data = random.randint(1, 100)
+        logging.info("Producer got message: %s", data)
+        pipeline.put(data)
+
+    logging.info("Producer received event. Exiting")
+
+def consumer_queue(pipeline, event):
+    
+    while not event.is_set() or not pipeline.empty():
+        message = pipeline.get()
+        logging.info(
+            "Consumer storing message: %s (size=%d)", message, pipeline.qsize()
+        )
+
+    logging.info("Consumer received event. Exiting")
+
+
+
+
 
 if __name__ == "__main__":
     format = "%(asctime)s: %(message)s"
@@ -68,9 +91,23 @@ if __name__ == "__main__":
                         datefmt="%H:%M:%S")
     # logging.getLogger().setLevel(logging.DEBUG)
     
-    pipeline = Pipeline()
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        executor.submit(producer, pipeline)
-        executor.submit(consumer, pipeline)
+    # Traditional way to create Producer and Consumer pipeline
+    # pipeline = Pipeline()
+    # with ThreadPoolExecutor(max_workers=2) as executor:
+    #     executor.submit(producer, pipeline)
+    #     executor.submit(consumer, pipeline)
 
-    logging.info(f"Final Value of Pipeline Message is: {pipeline.message}")
+    # logging.info(f"Final Value of Pipeline Message is: {pipeline.message}")
+
+    # Replicate Produce and Consumer using queue
+    pipeline = queue.Queue(maxsize=10)
+    event = threading.Event()
+
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        executor.submit(producer_queue, pipeline, event)
+        executor.submit(consumer_queue, pipeline, event)
+
+        time.sleep(5)
+        logging.info(f"Main: About to set event")
+        event.set()
+
