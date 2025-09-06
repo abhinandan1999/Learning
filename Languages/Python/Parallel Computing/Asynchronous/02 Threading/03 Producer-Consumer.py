@@ -1,4 +1,4 @@
-# python Parallel\ Computing/Asynchronous/04\ Producer-Consumer.py 
+# python Parallel\ Computing/Asynchronous/02\ Threading/03\ Producer-Consumer.py 
 
 import random
 import logging
