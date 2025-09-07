@@ -1,4 +1,4 @@
-# python -m Algorithmns.Sorting.bubble_sort
+# python -m Algorithmns.Sorting.01_bubble_sort
 from typing import List
 
 def bubble_sort(list_: List) -> List:

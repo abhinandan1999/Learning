@@ -1,4 +1,4 @@
-# python -m Algorithmns.Sorting.insertion_sort
+# python -m Algorithmns.Sorting.02_insertion_sort
 from typing import List
 
 
