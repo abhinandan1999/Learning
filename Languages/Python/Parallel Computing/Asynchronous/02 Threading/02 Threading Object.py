@@ -176,5 +176,54 @@ if __name__ == "__main__":
 
     print(f"Final List is {list_}")
 
+# 6. Event
+"""
+What:
+- A simple flag shared between threads.
+- One thread sets the event (set()), others can wait for it (wait()).
+
+Use Case:
+- Coordination between threads.
+- Example: start multiple workers only after initialization is complete.
+
+Analogy:
+A traffic light:
+   Cars (threads) wait at red.
+   When the signal goes green (set()), all cars move.
+"""
+
+# Difference between Event and Condition
+# | Feature                | `Event`                                                                | `Condition`                                                             |
+# | ---------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+# | **Type**               | Boolean flag                                                           | Lock + wait/notify                                                      |
+# | **Use case**           | Simple state signaling (start/stop)                                    | Complex resource coordination (queues, shared state)                    |
+# | **Wait**               | `event.wait()` blocks until flag is set                                | `condition.wait()` blocks until `notify()` is called                    |
+# | **Who wakes threads?** | `event.set()` (persistent until cleared)                               | `condition.notify()` or `notify_all()`                                  |
+# | **State remembered?**  | Yes — once set, all future `wait()` return immediately until `clear()` | No — if no one is waiting when `notify()` is called, the signal is lost |
+# | **One-to-many?**       | Natural — all waiters wake on `set()`                                  | By default `notify()` wakes 1, `notify_all()` wakes all                 |
+
+event = threading.Event()
+
+def worker():
+    print("Waiting for event...")
+    event.wait()
+    print("Event triggered!")
+
+event.set()  # Signal all waiters
+
+# 7. Timer
+"""
+What:
+- A thread that runs a function after a delay.
+
+Use Case:
+- Scheduled tasks, retry mechanisms.
+
+Analogy:
+- Alarm clock — goes off after a set time.
+"""
+timer = threading.Timer(5, lambda: print("Hello after 5s"))
+timer.start()
+
 
 
