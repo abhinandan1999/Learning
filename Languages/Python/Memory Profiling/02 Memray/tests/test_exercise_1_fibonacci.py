@@ -1,16 +1,18 @@
+# python -m pytest --memray tests/test_exercise_1_fibonacci.py
+# OR python -m pytest tests/test_exercise_1_fibonacci.py 
 import pytest
-from examples.exercise_1_fibonacci import generate_fibonacci_hash
+from examples.example1.exercise_1_fibonacci import generate_fibonacci_hash
 
 
-# @pytest.mark.limit_memory("100 KB")
-# def test_fibonacci():
-#     LENGTH_OF_SEQUENCE_1 = 33333  # pylint: disable=invalid-name
-#     LENGTH_OF_SEQUENCE_2 = 30000  # pylint: disable=invalid-name
-#     LENGTH_OF_SEQUENCE_3 = 34567  # pylint: disable=invalid-name
+@pytest.mark.limit_memory("100 KB")
+def test_fibonacci():
+    LENGTH_OF_SEQUENCE_1 = 33333  # pylint: disable=invalid-name
+    LENGTH_OF_SEQUENCE_2 = 30000  # pylint: disable=invalid-name
+    LENGTH_OF_SEQUENCE_3 = 34567  # pylint: disable=invalid-name
 
-#     generate_fibonacci_hash(
-#         LENGTH_OF_SEQUENCE_1, LENGTH_OF_SEQUENCE_2, LENGTH_OF_SEQUENCE_3
-#     )
+    generate_fibonacci_hash(
+        LENGTH_OF_SEQUENCE_1, LENGTH_OF_SEQUENCE_2, LENGTH_OF_SEQUENCE_3
+    )
 
 
 # Correctness tests

@@ -1,3 +1,15 @@
+"""
+Memory Profiling Commands (./example1)
+1. python -m memray run exercise_1_fibonacci.py (Output memray-exercise_1_fibonacci.py.<Run ID>.bin)
+2. python -m memray run -o output.bin exercise_1_fibonacci.py (Output output.bin)
+3. python -m memray run -o output3.bin -- ./exercise_1_fibonacci.py (Output output.bin)
+
+# To Create a Flamegraph Chart
+python -m memray flamegraph output.bin
+"""
+
+
+
 import operator
 from functools import reduce
 from itertools import chain
