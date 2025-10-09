@@ -1,0 +1,19 @@
+Filename: /Users/abhinandanpathak/Documents/Learning/Learning/Languages/Python/Memory Profiling/03 Memory_Profiler/examples/example1_memory_optimised/exercise_1_fibonacci_optimised.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    49     55.3 MiB     55.3 MiB           1   @profile(stream=fp)
+    50                                         def generate_fibonacci_hash(length_1, length_2, length_3):
+    51                                             # We could have used sum(...) here instead of reduce(operator.add, ...),
+    52                                             # but we choose to use reduce since it yields a more descriptive example
+    53                                             # of the generated flamegraph for this specific example
+    54     55.3 MiB      0.0 MiB           1       return (
+    55     55.3 MiB      0.0 MiB           3           reduce(
+    56     55.3 MiB      0.0 MiB           1               operator.add,
+    57     55.3 MiB      0.0 MiB           1               chain(fibonacci(length_1), fibonacci(length_2), fibonacci(length_3)),
+    58     55.3 MiB      0.0 MiB           1               0,
+    59                                                 )
+    60     55.3 MiB      0.0 MiB           1           % 10000
+    61                                             )
+
+
