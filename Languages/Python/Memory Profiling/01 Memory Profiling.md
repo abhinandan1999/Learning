@@ -17,11 +17,11 @@
 
 ### How it works (Coceptually)
 1. It intercepts calls to:
-    - malloc()
-    - calloc()
-    - realloc()
-    - free()
-    - PyObject_New
+    - malloc() ?
+    - calloc() ?
+    - realloc() ?
+    - free() ?
+    - PyObject_New ?
 2. Each Allocation is recorded with a stack trace (Includes both Python-level and C-level frames).
 3. Results are stored in .bin file.
 
@@ -45,11 +45,11 @@
 
 ### Memory Profiler Usecase
 1. Small Python functions where you want to see which line grows memory
-2. Detecting memory leaks (?)
+2. Detecting memory leaks (Memory which is being allocated but was never freed.)
 4. Debugging out-of-memory (OOM) issues
 
 ### How it works?
-It works by (sampling ?) the (resident set size (RSS) ?) of the process over time using the `psutil` or `ps` command, which gives a good **approximation** of memory usage for each line of Python code.
+It works by (sampling ?) the resident set size (RSS) of the process over time using the `psutil` or `ps` command, which gives a good **approximation** of memory usage for each line of Python code.
 
 1. It periodically checks the memory usage of the current Python process (sampling interval default = 0.1s).
 
@@ -68,3 +68,11 @@ It works by (sampling ?) the (resident set size (RSS) ?) of the process over tim
 
 ### Platform Supported
 1. MacOS, Linux, Windows
+
+
+### Memory Related Terminologies
+1. Resident Set Size (RSS)
+    - Resident Set Size (RSS) is the portion of a program’s memory that is **currently held in physical RAM (main memory)**.
+    - RSS = private memory + shared memory that’s currently resident in RAM
+        - Private memory → memory used only by your process
+        - Shared memory → memory shared with other processes (e.g., shared libraries)
