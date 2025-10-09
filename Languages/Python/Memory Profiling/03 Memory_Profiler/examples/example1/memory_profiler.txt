@@ -1,0 +1,85 @@
+Filename: /Users/abhinandanpathak/Documents/Learning/Learning/Languages/Python/Memory Profiling/03 Memory_Profiler/examples/example1/exercise_1_fibonacci.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    24     55.7 MiB     55.7 MiB           1   @profile(stream=fp) # When Stream is used then don't use -m memory_profiler (python exercise_1_fibonacci.py)
+    25                                         def fibonacci(length):
+    26                                             # edge cases
+    27     55.7 MiB      0.0 MiB           1       if length < 1:
+    28                                                 return []
+    29     55.7 MiB      0.0 MiB           1       if length == 1:
+    30                                                 return [1]
+    31     55.7 MiB      0.0 MiB           1       if length == 2:
+    32                                                 return [1, 1]
+    33                                         
+    34     55.7 MiB      0.0 MiB           1       output = [1, 1]
+    35                                         
+    36    110.4 MiB   -161.4 MiB       33332       for i in range(length - 2):
+    37    110.4 MiB   -106.3 MiB       33331           output.append(output[i] + output[i + 1])
+    38                                         
+    39    110.4 MiB      0.0 MiB           1       return output
+
+
+Filename: /Users/abhinandanpathak/Documents/Learning/Learning/Languages/Python/Memory Profiling/03 Memory_Profiler/examples/example1/exercise_1_fibonacci.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    24    110.5 MiB    110.5 MiB           1   @profile(stream=fp) # When Stream is used then don't use -m memory_profiler (python exercise_1_fibonacci.py)
+    25                                         def fibonacci(length):
+    26                                             # edge cases
+    27    110.5 MiB      0.0 MiB           1       if length < 1:
+    28                                                 return []
+    29    110.5 MiB      0.0 MiB           1       if length == 1:
+    30                                                 return [1]
+    31    110.5 MiB      0.0 MiB           1       if length == 2:
+    32                                                 return [1, 1]
+    33                                         
+    34    110.5 MiB      0.0 MiB           1       output = [1, 1]
+    35                                         
+    36    130.6 MiB -95473.4 MiB       29999       for i in range(length - 2):
+    37    130.6 MiB -95440.2 MiB       29998           output.append(output[i] + output[i + 1])
+    38                                         
+    39    130.6 MiB      0.0 MiB           1       return output
+
+
+Filename: /Users/abhinandanpathak/Documents/Learning/Learning/Languages/Python/Memory Profiling/03 Memory_Profiler/examples/example1/exercise_1_fibonacci.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    24    130.6 MiB    130.6 MiB           1   @profile(stream=fp) # When Stream is used then don't use -m memory_profiler (python exercise_1_fibonacci.py)
+    25                                         def fibonacci(length):
+    26                                             # edge cases
+    27    130.6 MiB      0.0 MiB           1       if length < 1:
+    28                                                 return []
+    29    130.6 MiB      0.0 MiB           1       if length == 1:
+    30                                                 return [1]
+    31    130.6 MiB      0.0 MiB           1       if length == 2:
+    32                                                 return [1, 1]
+    33                                         
+    34    130.6 MiB      0.0 MiB           1       output = [1, 1]
+    35                                         
+    36    190.1 MiB   -463.3 MiB       34566       for i in range(length - 2):
+    37    190.1 MiB   -402.5 MiB       34565           output.append(output[i] + output[i + 1])
+    38                                         
+    39    188.3 MiB     -1.8 MiB           1       return output
+
+
+Filename: /Users/abhinandanpathak/Documents/Learning/Learning/Languages/Python/Memory Profiling/03 Memory_Profiler/examples/example1/exercise_1_fibonacci.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    41     55.7 MiB     55.7 MiB           1   @profile(stream=fp)
+    42                                         def generate_fibonacci_hash(length_1, length_2, length_3):
+    43                                             # We could have used sum(...) here instead of reduce(operator.add, ...),
+    44                                             # but we choose to use reduce since it yields a more descriptive example
+    45                                             # of the generated flamegraph for this specific example
+    46    101.9 MiB      0.0 MiB           1       return (
+    47    101.9 MiB    -86.5 MiB           3           reduce(
+    48     55.7 MiB      0.0 MiB           1               operator.add,
+    49    188.3 MiB    132.6 MiB           1               chain(fibonacci(length_1), fibonacci(length_2), fibonacci(length_3)),
+    50    188.3 MiB      0.0 MiB           1               0,
+    51                                                 )
+    52    101.9 MiB      0.0 MiB           1           % 10000
+    53                                             )
+
+
