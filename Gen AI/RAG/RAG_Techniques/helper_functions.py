@@ -13,6 +13,7 @@ import random
 import textwrap
 import numpy as np
 from enum import Enum
+import os
 
 
 def replace_t_with_space(list_of_documents):
@@ -326,6 +327,7 @@ class EmbeddingProvider(Enum):
     OPENAI = "openai"
     COHERE = "cohere"
     AMAZON_BEDROCK = "bedrock"
+    AZURE_OPENAI = "azure_openai"
 
 # Enum class representing different model providers
 class ModelProvider(Enum):
@@ -358,5 +360,13 @@ def get_langchain_embedding_provider(provider: EmbeddingProvider, model_id: str 
     elif provider == EmbeddingProvider.AMAZON_BEDROCK:
         from langchain_community.embeddings import BedrockEmbeddings
         return BedrockEmbeddings(model_id=model_id) if model_id else BedrockEmbeddings(model_id="amazon.titan-embed-text-v2:0")
+    elif provider == EmbeddingProvider.AZURE_OPENAI:
+        from langchain_openai import AzureOpenAIEmbeddings
+        return AzureOpenAIEmbeddings(
+            model=os.environ.get("EMBEDDING_AZURE_OPENAI_DEPLOYMENT"),
+            azure_endpoint=os.environ.get("EMBEDDING_AZURE_OPENAI_ENDPOINT"),
+            openai_api_version=os.environ.get("AZURE_API_VERSION"),
+            api_key=os.environ.get("EMBEDDING_MODEL_API_KEY")
+        )
     else:
         raise ValueError(f"Unsupported embedding provider: {provider}")
