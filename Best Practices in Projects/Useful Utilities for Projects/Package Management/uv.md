@@ -33,7 +33,7 @@ A side-by-side comparison of **UV** (modern package manager) and **PIP** (defaul
 |----------|----------------|----------------|-----------------------|
 | Initialize environment | `uv init` | `python -m venv <env>` | `uv` creates env + lock file automatically. |
 | Convert requirements.txt to uv.lock | `uv add -r requirements.txt` | None | It installs packages from requirements.txt file and create *uv.lock* |
-| Sync/install from lock file | `uv sync` | `pip install -r requirements.txt` | `uv` uses lock file for reproducibility; pip uses `requirements.txt`. |
+| Sync/install from lock file/pyproject.toml | `uv sync` | `pip install -r requirements.txt` | `uv` uses lock file for reproducibility; pip uses `requirements.txt`. |
 | Creates uv.lock file | `uv lock` |  | `uv` creates uv.lock file for reproducibility; pip uses `requirements.txt`. |
 | Export environment | `uv export` | `pip freeze > requirements.txt` | `uv` maintains structured lock file; pip just lists installed packages. |
 | Convert uv.lock file to requirements.txt | None | `uv export --no-hashes --format requirements-txt -o <filename>.txt` | It converts *uv.lock* file to *requirements.txt*
