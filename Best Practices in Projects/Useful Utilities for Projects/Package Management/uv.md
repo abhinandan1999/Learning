@@ -32,6 +32,7 @@ A side-by-side comparison of **UV** (modern package manager) and **PIP** (defaul
 | **Task** | **UV Command** | **PIP Command** | **Notes / Differences** |
 |----------|----------------|----------------|-----------------------|
 | Initialize environment | `uv init` | `python -m venv <env>` | `uv` creates env + lock file automatically. |
+| Initialize environment with specific python version | `uv venv <name> --python <x.xx version of python` | Pip Does not manage version of python | `uv` creates .venv + lock file automatically in specific version of python. |
 | Convert requirements.txt to uv.lock | `uv add -r requirements.txt` | None | It installs packages from requirements.txt file and create *uv.lock* |
 | Sync/install from lock file/pyproject.toml | `uv sync` | `pip install -r requirements.txt` | `uv` uses lock file for reproducibility; pip uses `requirements.txt`. |
 | Creates uv.lock file | `uv lock` |  | `uv` creates uv.lock file for reproducibility; pip uses `requirements.txt`. |
