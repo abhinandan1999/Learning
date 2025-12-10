@@ -1,0 +1,3 @@
+# MANIFEST.in - Specify the additional files to include in the package other than code files
+
+include src/reader/*.toml
