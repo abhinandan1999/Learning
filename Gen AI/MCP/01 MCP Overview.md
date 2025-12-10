@@ -35,3 +35,13 @@ Clients and Server exchange messages of the following types:
 - CallToolRequest: Please execute this tool with these arguments. (Client to Server)
 - CallToolResult: Here is the result of the tool execution. (Server to Client)
 
+
+## Tools: LLM Controlled
+- Tools are controlled entirely by LLMs. The AI Model decides when to call these tools.
+
+## Resources: App Controlled
+- Resources are controlled by your application. App decides when to fetch resource data and how to use it.
+Typically for UI elements or to add Context to conversation.
+
+## Prompts: User Controlled
+- Prompts are triggered by the user actions. Users decide when to run these predefined workflows through UI interactions like button clicks, menu selections, or slash commands.
