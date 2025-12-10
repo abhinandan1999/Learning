@@ -42,6 +42,13 @@ dependencies = ["requests>=2.0,<4.0", 'typing-extensions; python_version<"3.8"']
 optional-dependencies = { test = ["pytest>=7"], docs=["sphinx"] } # Additional Optional Dependencies
 dynamic = ["version"]                    # list of fields computed at build time - Duty of [build-system.build-backend]
 
+[dependency-groups] # PEP-standard way to declare optional dependency sets
+dev = [
+    "pytest>=8.3.5",
+]
+# pip install .[dev]
+# uv add --dev pytest
+
 [project.readme]
 file = "README.md"
 content-type = "text/markdown"

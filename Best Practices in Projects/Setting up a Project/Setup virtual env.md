@@ -168,7 +168,125 @@ pip list --format=freeze > <filename.txt>
 
 
 
-### 3. Using uv [TODO]
+### 3. Using uv
+#### Installing Standalone Installer
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+wget -qO- https://astral.sh/uv/install.sh | sh
+```
+
+#### Installing using pip
+```
+python -m pip install uv
+```
+
+#### Initialise a project with uv
+```
+uv init <project-name>
+```
+Note: Don't specify <project-name> if you want to initialise in current directory. It is dependent on `pyproject.toml`
+
+#### Running a project with uv
+```
+uv run <entry-point.py>
+```
+
+#### Install python using uv
+```
+uv python install <python-version>
+```
+
+#### List all the installed python versions
+```
+uv python list
+```
+
+#### To Enforece a Project wise Python version
+Add this to Pyproject.toml
+```
+[project]
+requires-python = ">=3.11"
+```
+```
+uv venv create
+```
+
+#### Create a Virtual Environment
+```
+uv venv create --python <python-version> <env-name>
+```
+
+#### List all the virtual environments
+```
+uv venv list
+```
+
+#### Activate the Virtual Environment
+```
+source <env-name>/bin/activate
+```
+
+#### Deactivate the virtual Environment
+```
+deactivate
+```
+
+#### Add a Python Package to uv
+```
+uv add <package-name>
+```
+
+#### Remove a Python Package from uv
+```
+uv remove <package-name>
+```
+
+#### Upgrade a Python Package from uv
+```
+uv add --upgrade <package-name>
+```
+
+#### List all the Python Packages in uv
+```
+uv pip list
+```
+
+#### Install Optional Dependencies from pyproject.toml
+```
+uv add --dev <package-name>
+```
+
+#### Setup Project from pyproject.toml
+```
+uv sync
+```
+- Reads pyproject.toml and installs all dependencies
+- Creates virtual environment if not present
+
+
+#### Build a Distribution Package
+```
+uv build --wheel
+```
+
+#### Publish a Distribution Package
+```
+uv publish --index testpypi --token your_token_here
+```
+Note: To Publish using uv, you need to add the index to the `pyproject.toml`
+"""
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
+"""
+
+
+
+
+
+
 
 
 
