@@ -68,6 +68,7 @@ class MCPClient:
 
     async def list_tools(self) -> list[types.Tool]:
         result = await self.session().list_tools()
+        # print(json.dumps(result.tools[0].dict(), indent=2))
         return result.tools
 
     async def call_tool(
