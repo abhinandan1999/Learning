@@ -264,7 +264,7 @@ uv pip install -e .
 #### Setup Project from pyproject.toml
 ```
 uv sync
-```
+``` 
 ```
 uv sync --extra <extra-name>
 ```

@@ -16,3 +16,34 @@ def sample_data():
 Note: It is good practice to name fixtures descriptively and it is maintained in a separate file called `conftest.py`
 - `sample_data` should be argument to the test function
 
+### Markers: Customizing Test Execution
+Pytest enables us to define categories of tests and run them selectively.
+
+```python
+@pytest.mark.smoke
+def test_add(sample_data: tuple[int, int]):
+    # a, b = sample_data
+    assert add(**sample_data) == 3
+```
+```bash
+pytest -m smoke
+```
+
+
+Tip: Because any marker name can be used, it is advised to use --strict-markers option to pytest to ensure that only markers defined in pytest.ini are used.
+
+
+### Parametrization: Running Tests with Different Data
+Parametrization allows you to run the same test with different inputs.
+```python
+@pytest.mark.parametrize("a, b, expected", [
+    (1, 2, 3),
+    (2, 3, 5),
+    (3, 4, 7),
+])
+def test_add(a, b, expected):
+    assert add(a, b) == expected
+```
+
+
+
