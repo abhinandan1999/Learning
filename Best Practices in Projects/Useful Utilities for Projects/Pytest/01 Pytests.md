@@ -45,5 +45,29 @@ def test_add(a, b, expected):
     assert add(a, b) == expected
 ```
 
+### Check for Slow Test Cases
+```bash
+python -m pytest --durations=10 -vv <tests/>
+```
+
+### Useful Pytest Plugins
+```pyproject.toml
+[tool.pytest.ini_options]
+addopts = """
+-vv # Verbose output
+--strict-markers # Ensures that only markers defined in pytest.ini are used
+--cov=src # Measures the coverage of the src directory
+--cov-report=term-missing # Shows the missing lines in the code
+--cov-report=html # Generates HTML report
+--cov-fail-under=80 # Fails the test if the coverage is less than 80%
+--durations=10 # Shows the top 10 slowest tests
+"""
+testpaths = ["tests"]
+markers = [
+    "smoke: smoke tests (basic critical tests)",
+    "slow: slow running tests",
+]
+```
+
 
 

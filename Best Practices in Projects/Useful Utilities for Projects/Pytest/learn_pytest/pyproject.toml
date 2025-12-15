@@ -9,12 +9,22 @@ requires-python = ">=3.9"
 
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "pytest-cov"]
 
 [tool.pytest.ini_options]
-addopts = "--strict-markers"
+addopts = """
+-vv
+--strict-markers
+--cov=src
+--cov-report=term-missing
+--cov-report=html
+--cov-fail-under=80
+--durations=10
+"""
+testpaths = ["tests"]
 markers = [
     "smoke: smoke tests (basic critical tests)",
+    "slow: slow running tests",
 ]
 
 #[tool.setuptools]
