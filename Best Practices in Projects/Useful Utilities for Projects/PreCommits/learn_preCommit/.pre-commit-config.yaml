@@ -21,3 +21,4 @@ repos:
     rev: v0.13.0
     hooks:
       - id: detect-secrets
+        # args: ['--baseline', './.secrets.baseline'] # Create a baseline snapshot of valid secrets against which to compare future commits

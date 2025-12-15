@@ -9,10 +9,7 @@ requires-python = ">=3.9"
 
 
 [project.optional-dependencies]
-dev = ["pre-commit"]
-
-[tools.detect-secrets]
-args = ["--baseline", ".secrets.baseline"]
+dev = ["pre-commit", "detect-secrets"]
 
 #[tool.setuptools]
 #package-dir = {"" = "src"}
