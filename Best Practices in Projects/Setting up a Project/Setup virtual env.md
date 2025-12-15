@@ -256,6 +256,11 @@ uv pip list
 uv add --dev <package-name>
 ```
 
+### Install a package in editable mode
+```
+uv pip install -e .
+```
+
 #### Setup Project from pyproject.toml
 ```
 uv sync
