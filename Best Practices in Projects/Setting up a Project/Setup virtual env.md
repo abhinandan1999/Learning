@@ -265,6 +265,9 @@ uv pip install -e .
 ```
 uv sync
 ```
+```
+uv sync --extra <extra-name>
+```
 - Reads pyproject.toml and installs all dependencies
 - Creates virtual environment if not present
 
