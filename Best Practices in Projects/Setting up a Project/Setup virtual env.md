@@ -55,7 +55,7 @@ pyenv versions
 ##### Set global version of python
 ```
 pyenv global <version of python>
-``` 
+```
 
 ##### Create Virtual Environment
 ```
@@ -133,7 +133,7 @@ conda deactivate
 conda env list
 ```
 
-##### Remove the environment 
+##### Remove the environment
 ```
 conda remove -n <ENV_NAME> --all
 ```
@@ -236,6 +236,11 @@ deactivate
 uv add <package-name>
 ```
 
+#### Add a Python Package to uv in a specified group of pyproject.toml file
+```
+uv add --group <group-name> <package-name>
+```
+
 #### Remove a Python Package from uv
 ```
 uv remove <package-name>
@@ -264,7 +269,7 @@ uv pip install -e .
 #### Setup Project from pyproject.toml
 ```
 uv sync
-``` 
+```
 ```
 uv sync --extra <extra-name>
 ```
@@ -289,12 +294,3 @@ url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
 """
-
-
-
-
-
-
-
-
-

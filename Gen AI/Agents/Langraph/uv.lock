@@ -1560,6 +1560,7 @@ dev = [
     { name = "learn-langgraph" },
     { name = "notebook" },
     { name = "pytest" },
+    { name = "requests" },
     { name = "wikipedia" },
 ]
 
@@ -1583,6 +1584,7 @@ dev = [
     { name = "learn-langgraph", editable = "." },
     { name = "notebook" },
     { name = "pytest", specifier = ">=8.3.5" },
+    { name = "requests", specifier = ">=2.32.5" },
     { name = "wikipedia" },
 ]
 
