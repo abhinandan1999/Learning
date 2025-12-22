@@ -8,9 +8,19 @@ name = "learn-langgraph"
 version = "0.1.0"
 description = "Learn LangGraph"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11,<3.14"
 dependencies = [
-
+    "langgraph",
+    "langgraph-prebuilt",
+    "langgraph-sdk",
+    "langgraph-checkpoint-sqlite",
+    "langsmith",
+    "langchain-community",
+    "langchain-core",
+    "langchain-openai",
+    "langchain-tavily",
+    "trustcall",
+    "langgraph-cli[inmem]",
 ]
 
 
@@ -22,6 +32,8 @@ where = ["src"]
 
 [dependency-groups]
 dev = [
+    "notebook",
+    "wikipedia",
     "pytest>=8.3.5",
 ]
 
