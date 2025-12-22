@@ -35,6 +35,7 @@ dev = [
     "notebook",
     "wikipedia",
     "pytest>=8.3.5",
+    "learn-langgraph",
 ]
 
 [tool.black]
@@ -49,3 +50,6 @@ exclude = '''
 profile = "black"
 line_length = 120
 skip_glob = ["notebooks/*"]
+
+[tool.uv.sources]
+learn-langgraph = { workspace = true }
