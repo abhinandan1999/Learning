@@ -238,7 +238,10 @@ uv add <package-name>
 
 #### Add a Python Package to uv in a specified group of pyproject.toml file
 ```
-uv add --group <group-name> <package-name>
+uv add --group <group-name (dev, test)> <package-name>
+```
+```
+uv add --optional <group-name (dev, test)> <package-name>
 ```
 
 #### Remove a Python Package from uv
